@@ -1,7 +1,19 @@
-.project
-/upload/surveys/*
+application/config/config.php
+
+#dot-file exceptions
+
+.*
+
+!.gitignore
+
+!.gitkeep
+
+!.htaccess
+
+!.sf
+
+!.gitattributes
 /styles/gringegreen/images/Thumbs.db
-/upload/templates/*
 /tmp/runtime/HTML
 /application/controllers/admin/updater.php
 /tmp/*.html
@@ -10,7 +22,6 @@
 /tmp/*.xls
 /tmp/*.lsa
 /tmp/upload/fu*
-/upload/.htaccess
 /nbproject
 /tmp/assets/*
 /tmp/runtime/cache/*

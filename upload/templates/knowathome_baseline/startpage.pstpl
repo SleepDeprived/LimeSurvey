@@ -1,0 +1,65 @@
+                                                                                                                                                                                                                                                                                                                                
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="generator" content="LimeSurvey http://www.limesurvey.org" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=2" />
+    <!-- The following line includes template.css and if an RTL-language is used template-rtl.css -->
+    {TEMPLATECSS}
+
+    <title>{SURVEYNAME}</title>
+
+    <link rel='stylesheet' type='text/css' href='{TEMPLATEURL}template.css' />
+<!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="{TEMPLATEURL}ie_fix_7.css" />
+<![endif]-->
+<!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="{TEMPLATEURL}ie_fix_8.css" />
+<![endif]-->
+
+
+    <!-- The following CSS hides visual elements of the progress bar from screen readers. -->
+	<style type="text/css" media="aural tty">
+        progress-graph .zero, progress-graph .graph, progress-graph .cent { display: none; }
+	</style>
+
+<!-- TEMPLATEJS -->
+<script type='text/javascript' src='{TEMPLATEURL}jquery.js'></script>
+<script type='text/javascript' src='/scripts/jquery/jquery-ui.js'></script>
+<script type='text/javascript' src='/scripts/jquery/jquery.ui.touch-punch.min.js'></script>
+<script type='text/javascript' src='/scripts/survey_runtime.js'></script>
+<script type='text/javascript' src='/scripts/date.js'></script>
+<script type='text/javascript' src='{TEMPLATEURL}template.js'></script>
+<!-- END TEMPLATEJS -->
+
+    <link rel="shortcut icon" href="{TEMPLATEURL}favicon.ico" />
+<!--{GOOGLE_ANALYTICS_JAVASCRIPT}-->
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body class="lang-{SURVEYLANGUAGE} {SURVEYFORMAT}">
+
+<div id="outer-wrapper">
+
+    <!--div id="header-wrapper" class="clearfix">
+        <div class="header_left">
+            <img src="{TEMPLATEURL}logo.png" alt="" />
+        </div>
+        <div class="header_right">
+             
+        </div>
+        <div class="header_middle">
+             
+        </div>
+    </div-->
+  
+
+    <div id="content-wrapper">
+    <div id="panel_left">
+      <div id="about"></div>
+      <div id="content">
+          {SURVEYDESCRIPTION}
+      </div>
+    </div>
+  <div id="panel_right">                                                                                                                        
+                                    

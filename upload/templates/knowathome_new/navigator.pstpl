@@ -1,0 +1,14 @@
+<div id="prevnext" class="submit_mobile">
+        {NAVIGATOR}
+    </div>
+<div id="navigator" class="clearfix">
+    <div id="left">
+        {SAVE}
+    </div>
+    <div id="right">
+        {CLEARALL}
+    </div>
+    <div id="middle" class="submit_full">
+        {NAVIGATOR}
+    </div>
+</div>

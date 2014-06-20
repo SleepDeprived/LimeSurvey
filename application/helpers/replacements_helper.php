@@ -69,6 +69,8 @@ function templatereplace($line, $replacements = array(), &$redata = array(), $de
     'token',
     'totalBoilerplatequestions',
     'totalquestions',
+    'surveyid',
+    'saveid'
     );
 
     $varsPassed = array();
@@ -782,6 +784,8 @@ EOD;
     $coreReplacements['TOKEN'] = (!$anonymized ? $_token : '');// Silently replace TOKEN by empty string
     $coreReplacements['URL'] = $_linkreplace;
     $coreReplacements['WELCOME'] = (isset($thissurvey['welcome']) ? $thissurvey['welcome'] : '');
+    $coreReplacements['SURVEYID'] = (isset($redata['surveyid']) ? $redata['surveyid'] : '');
+    $coreReplacements['SAVEID'] = (isset($redata['saved_id']) ? $redata['saved_id'] : '');
 
     if (!is_null($replacements) && is_array($replacements))
     {

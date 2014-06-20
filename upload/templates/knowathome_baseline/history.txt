@@ -1,0 +1,30 @@
+2010-10-15 #####################################################################
+- correction of some headings
+- removed 100% width from printouttable
+
+2010-10-10 #####################################################################
+- captcha form formated
+
+2010-10-06 #####################################################################
+- right alignment of text in input form fields in numeric type of questions
+
+2010-09-30 #####################################################################
+- footer adjusted
+- hover effect in input form fields added
+- changed template color-scheme
+- changed navigator
+- changed position of progress bar / language bar
+- errormandatory aligned
+
+Version 0.01.100910
+- Slideraussehen korrigiert
+
+Version 0.01.100909 ############################################################
+- replaced tabulators in some pstpl-files through spaces
+- in welcome.pstpl and templates.css changed classname
+  before: nrquestions, after: therearexquestions
+- repositioning of some classes in templates.css
+
+
+Version 0.01 ###################################################################
+- initial template version

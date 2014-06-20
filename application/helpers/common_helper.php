@@ -1440,6 +1440,7 @@ function sendCacheHeaders()
         header("Cache-Control: post-check=0, pre-check=0", false);
         header("Pragma: no-cache");
         header('Content-Type: text/html; charset=utf-8');
+        header('X-Frame-Options: SAMEORIGIN');
     }
 }
 

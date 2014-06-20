@@ -2354,7 +2354,8 @@ class remotecontrol_handle
 
         $oExport=new ExportSurveyResultsService();
         $sTempFile=$oExport->exportSurvey($iSurveyID,$sLanguageCode, $sDocumentType,$oFomattingOptions, '');
-        return new BigFile($sTempFile, true, 'base64');
+        return $sTempFile;
+        //return new BigFile($sTempFile, true, 'base64');
     }
 
     /**
@@ -2458,4 +2459,299 @@ class remotecontrol_handle
             return true;
         }
     }
+    function save_answer_simple($sSessionKey, $iSurveyID, $aResponseData){
+   
+    	if (!$this->_checkSessionKey($sSessionKey)) return json_encode(array('error' => 'Error: Invalid session key')); 
+    	$oSurvey=Survey::model()->findByPk($iSurveyID);
+    	if (is_null($oSurvey))
+    	{
+    		return json_encode(array('error' => 'Error: Invalid survey ID'));
+    	}
+    	 
+    	if (hasSurveyPermission($iSurveyID, 'responses', 'create'))
+    	{
+    		if (!Yii::app()->db->schema->getTable('{{survey_' . $iSurveyID . '}}'))
+    			return json_encode(array('error' => 'No survey response table'));
+    		 
+    		//set required values if not set
+    		 
+    		// @todo: Some of this is part of the validation and should be done in the model instead
+    		if (!isset($aResponseData['submitdate']))
+    			$aResponseData['submitdate'] = date("Y-m-d H:i:s");
+    		if (!isset($aResponseData['startlanguage']))
+    			$aResponseData['startlanguage'] = getBaseLanguageFromSurveyID($iSurveyID);
+    		 
+    		if ($oSurvey->datestamp=='Y')
+    		{
+    			if (!isset($aResponseData['datestamp']))
+    				$aResponseData['datestamp'] = date("Y-m-d H:i:s");
+    			if (!isset($aResponseData['startdate']))
+    				$aResponseData['startdate'] = date("Y-m-d H:i:s");
+    		}
+    		$data = array();
+    	
+    		foreach($aResponseData['answers'] as $key=> $value){
+    			
+    			$quesid = str_replace("field", "", $key); 
+    			$QuestionType = Questions::model()->findByAttributes(array("qid" => $quesid))->attributes;
+    			
+    			$groupid=$QuestionType['gid'];
+    			switch($QuestionType['type']){
+    				case '!':    					
+    					if(is_numeric($value[0])) {
+    						$data[$iSurveyID."X".$groupid."X".$quesid] = $value[0];    						
+    					}
+    					else {
+    						$data[$iSurveyID."X".$groupid."X".$quesid] = '-oth-';
+    						$data[$iSurveyID."X".$groupid."X".$quesid."other"] = $value['-oth-'];
+    					}
+    					break;
+    				case 'L':
+    					$data[$iSurveyID."X".$groupid."X".$quesid] = $value[0];
+    					break;
+    				case 'M':
+    					
+    					#foreach($value['answers'] as $answerid){
+    					foreach($value as $answerid){
+    						$data[$iSurveyID."X".$groupid."X".$quesid."$answerid"] = 'Y';    						
+    					}
+    					if(isset($value['other'])){
+    						$data[$iSurveyID."X".$groupid."X".$quesid."other"] = $value['other'];
+    					}
+    					
+    					break;
+    				case 'U':
+    				case 'T':
+    				case 'S':
+    				case 'D':
+    				case 'N':
+    					$data[$iSurveyID."X".$groupid."X".$quesid] = $value[0];
+    					
+    					break;
+    				default:
+    					break;
+    			}    			
+    		}
+    		
+    		$aResponseData['lastpage'] = 1;
+    		unset($aResponseData['answers']);
+    		$tokenid = $aResponseData['tokenid'];
+    		unset($aResponseData['tokenid']);
+    		$aResponseData = array_merge($aResponseData,$data);
+    		
+    		Survey_dynamic::sid($iSurveyID);
+    		$survey_dynamic = new Survey_dynamic;
+    		$aBasicDestinationFields=$survey_dynamic->tableSchema->columnNames;
+    		foreach($aBasicDestinationFields as $key=>$sgqa){
+    			if(!isset($aResponseData[$sgqa])){
+    				$aResponseData[$sgqa]='';
+    			}
+    		}
+    		unset($aResponseData['id']);
+    		$aResponseData=array_intersect_key($aResponseData, array_flip($aBasicDestinationFields));
+
+    		$result_id = $survey_dynamic->insertRecords($aResponseData);
+    		
+    		if (tableExists('{{tokens_' . $iSurveyID . '}}'))
+    		{
+    			$completed = Tokens_dynamic::model($iSurveyID)->findByPk($tokenid);
+    			$completed->usesleft = $completed->usesleft-1;
+    			$completed->completed = $aResponseData['submitdate'];
+    			$completed->save();				
+    		}	
+    		
+    		if ($result_id)
+    			return $result_id;
+    		else
+    			return json_encode(array('error' => 'Unable to add response'));
+    	}
+    	else
+    		return json_encode(array('error' => 'No permission'));
+    	 
+    }
+
+    function list_questions_simple($sSessionKey, $iSurveyID, $sLanguage){
+    	$oSurvey = Survey::model()->findByPk($iSurveyID);
+    	if ($this->_checkSessionKey($sSessionKey))
+    	{
+    		Yii::app()->loadHelper("surveytranslator");
+    		$oSurvey = Survey::model()->findByPk($iSurveyID);
+    		if (!isset($oSurvey))
+    			return json_encode(array('error' => 'Error: Invalid survey ID'));
+    		 
+    		if (hasSurveyPermission($iSurveyID, 'survey', 'read'))
+    		{
+    			if (is_null($sLanguage))
+    				$sLanguage=$oSurvey->language;
+    			 
+    			if (!array_key_exists($sLanguage,getLanguageDataRestricted()))
+    				return json_encode(array('error' => 'Error: Invalid language'));
+    			 
+    			if($iGroupID!=NULL)
+    			{
+    				$oGroup = Groups::model()->findByAttributes(array('gid' => $iGroupID));
+    				$sGroupSurveyID = $oGroup['sid'];
+    				 
+    				if($sGroupSurveyID != $iSurveyID)
+    					return json_encode(array('error' => 'Error: IMissmatch in surveyid and groupid'));
+    				else
+    					$aQuestionList = Questions::model()->findAllByAttributes(array("sid"=>$iSurveyID, "gid"=>$iGroupID,"parent_qid"=>"0","language"=>$sLanguage), array('order' => 'question_order ASC') );
+    			}
+    			else
+    				$aQuestionList = Questions::model()->findAllByAttributes(array("sid"=>$iSurveyID,"parent_qid"=>"0", "language"=>$sLanguage));
+    			 
+    			if(count($aQuestionList)==0)
+    				return json_encode(array('error' => 'No questions found'));
+    			$oSurveyLanguageSettings = Surveys_languagesettings::model()->findByAttributes(array('surveyls_survey_id' => $iSurveyID, 'surveyls_language' => $sLanguage));
+    			$questions = array();
+    			 
+    			foreach ($aQuestionList as $oQuestion)
+    			{
+    				$type = $oQuestion->attributes['type'];
+    				if($type == '!' || $type=='L')
+    				{
+    					$questype = '';
+    					switch ($type) {
+    						case '!':
+    							$questype = "dropdown";
+    							break;
+    						case 'L':
+    							$questype = "radio";
+    							break;
+    						default:
+    							break;
+    					}
+    					 
+    					$iQuestionID = $oQuestion->attributes['qid'];
+    					$oAttributes = Answers::model()->findAllByAttributes(array('qid' => $iQuestionID, 'language'=> $sLanguage ),array('order'=>'sortorder') );
+    					if (count($oAttributes)>0)
+    					{
+    						$aData = array();
+    						foreach($oAttributes as $oAttribute) {
+    							$aData[$oAttribute['code']]=$oAttribute['answer'];
+    							 
+    						}
+    						$aResult['description']=$oQuestion->attributes['question'];
+    						$aResult['type'] = $questype;
+    						$aResult['values']=$aData;
+    						if($oQuestion->attributes['other'] == 'Y')
+    						{
+    							$aResult['values']['other'] = '#other#';
+    						}
+    					}
+    					else
+    					{
+    						$aResult['type'] = $questype;
+    						$aResult['description']=$oQuestion->attributes['question'];
+    						$aResult['answeroptions']='No available answer options';
+    					}
+    					 
+    					 
+    					$questions["field".$oQuestion->attributes['qid']] = $aResult;
+    				}
+    				elseif($type=='M') {
+    					$iQuestionID = $oQuestion->attributes['qid'];
+    					$oSubQuestions =  Questions::model()->findAllByAttributes(array('parent_qid' => $iQuestionID,'language'=>$sLanguage ), array('order' => 'question_order ASC') );
+    					$questype = '';
+    					switch ($type) {
+    						case 'M':
+    							$questype = "checkbox";
+    							break;
+    							 
+    						default:
+    							break;
+    					}
+    					if (count($oSubQuestions)>0)
+    					{
+    						$aData = array();
+    						foreach($oSubQuestions as $oSubQuestion)
+    						{
+    							 
+    							$aData[$oSubQuestion['title']]= $oSubQuestion['question'];
+    						}
+    						$questions["field".$oQuestion->attributes['qid']]['description'] = $oQuestion->attributes['question'];
+    						if($oQuestion->attributes['other'] == 'Y')
+    						{
+    							$aData['other'] = '#other#';
+    						}
+    						$questions["field".$oQuestion->attributes['qid']]['type'] = $questype;
+    						$questions["field".$oQuestion->attributes['qid']]['values'] = $aData;
+    						 
+    					}
+    					else
+    					{
+    						$questions["field".$oQuestion->attributes['qid']]['type'] = $questype;
+    						$questions["field".$oQuestion->attributes['qid']]['description'] = $oQuestion->attributes['question'];
+    						 
+    						$aResult[$sPropertyName]='No available answers';
+    					}
+    
+    					 
+    				}
+    				elseif($type=='U' || $type=='T' || $type=='S' || $type=='D' || $type=='N'){
+    					 
+    					$questype = '';
+    					switch ($type) {
+    						case 'U':
+    							$questype = "text";
+    							break;
+    						case 'T':
+    							$questype = "text";
+    							break;
+    						case 'S':
+    							$questype = "text";
+    							break;
+    						case 'D':
+    							$questype = "date";
+    							break;
+    						case 'N':
+    							$questype = "numeric";
+    							break;
+    						default:
+    							break;
+    					}
+    
+    					$questions["field".$oQuestion->attributes['qid']]['type'] = $questype;
+    					$questions["field".$oQuestion->attributes['qid']]['description'] = $oQuestion->attributes['question'];
+    					//$oQuestion
+    				}
+    				else {
+    
+    				}
+    				//$questions[]= array('id'=>$oQuestion->primaryKey,'type'=>$oQuestion->attributes['type'], 'question'=>$oQuestion->attributes['question']);
+
+    				$questions["field".$oQuestion->attributes['qid']]['mandatory'] = $oQuestion->attributes['mandatory'];
+    				$questions["field".$oQuestion->attributes['qid']]['group_id'] = $oQuestion->attributes['gid'];
+    				
+    				$from = $oQuestion->attributes['relevance'];
+    				$to = preg_replace("/(\d+)X(\d+)X(\d+)/ ", 'field\\3', $from);
+    				$relevance = str_replace('.NAOK', '', $to);
+    				$relevance = str_replace('"', "'", $relevance);
+    				
+    				$questions["field".$oQuestion->attributes['qid']]['relevance'] = $relevance;
+    				$questions["field".$oQuestion->attributes['qid']]['question_order'] = $oQuestion->attributes['question_order'];
+    				
+    			}
+    			
+    			uasort($questions, $this->build_sorter('question_order'));
+    			#$questions = $this->record_sort($questions, 'question_order');
+    			
+    			$aResult = array(
+    					'sid' => $iSurveyID,
+    					'name'=> $oSurveyLanguageSettings->attributes['surveyls_title'],
+    					'questions' => $questions
+    			);
+    			return json_encode($aResult);
+    		}
+    		else
+    			return json_encode(array('error' => 'No permission'));
+    		 
+    	}    
+    }
+    
+	function build_sorter($key) {
+    	return function ($a, $b) use ($key) {
+        	return strnatcmp($a[$key], $b[$key]);
+    	};
+	}
 }

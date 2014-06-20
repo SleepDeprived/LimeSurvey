@@ -1,0 +1,45 @@
+                                @import url("template_full.css") screen and (min-width:999px);
+@import url("template_mobile.css") screen and (max-width:998px);
+@media screen and (max-width:998px) {
+	#panel_left {
+		display: none;
+	}
+	.full_version {
+		display: none;
+	}
+	.submit_full {
+		display: none;
+	}
+	.submit_mobile {
+		display: block;
+	}
+	.mobile_complited {
+		display: block;
+	}
+	#group-wrapper {
+		width: 91%;
+	}
+}
+
+@media screen and (min-width:998px) {
+	.mobile_version {
+		display: none;
+	}
+	.submit_mobile {
+		display: none;
+	}
+	.mobile_complited {
+		display: none;
+	}
+}
+
+div.notification {
+  width: 90%;
+  background-color: #B73B32;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 2%;
+  border-radius: 8px;
+  margin: auto;
+  text-align: center;
+}                        

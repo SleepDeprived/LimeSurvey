@@ -1,0 +1,14 @@
+<div class="percentcomplete">{PERCENTCOMPLETE}</div>  
+
+<div id="completed">
+    {COMPLETED}<br /><br />
+    <div class="mobile_complited">
+    	<div id="about"></div>
+  		<div id="content">
+    		{COMPLETED}
+    	</div>
+		{URL}
+    </div>
+</div>
+
+<div id="surveydata" surveyid="{SURVEYID}" saveid="{SAVEID}" style="display:none"></div>            
