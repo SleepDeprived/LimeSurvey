@@ -92,8 +92,6 @@ class Authwebserver extends AuthPluginBase
 
             if ($oUser->save())
             {
-                $permission=new Permission;
-                $permission->setPermissions($oUser->uid, 0, 'global', $this->api->getConfigKey('auth_webserver_autocreate_permissions'), true);
 
                 // read again user from newly created entry
                 $this->setAuthSuccess($oUser);

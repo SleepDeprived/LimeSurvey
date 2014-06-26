@@ -30,7 +30,20 @@ class Authentication extends Survey_Common_Action
     * Show login screen and parse login data
     */
     public function index()
-    {
+    {   
+        if (isset($_GET['surveyId'])) 
+            $_SESSION['surveyId'] = $_GET['surveyId'];
+        if (isset($_SESSION['surveyId']) && isset(Yii::app()->session['loginID'])){
+            $permissions = Permission::getSurveyBasePermissions();
+                        $permission= new Permission;
+                        $permission->setPermissions(
+                                Yii::app()->session['loginID'], 
+                                $_SESSION['surveyId'], 
+                                'survey',
+                                $permissions,
+                                false);
+
+        }
         $this->_redirectIfLoggedIn();
         
         // Make sure after first run / update the authdb plugin is registered and active
@@ -79,6 +92,17 @@ class Authentication extends Survey_Common_Action
             // Now authenticate
             if ($identity->authenticate()) 
             {
+            if (isset($_SESSION['surveyId']) && isset(Yii::app()->session['loginID'])){
+                $permissions = Permission::getSurveyBasePermissions();
+                        $permission= new Permission;
+                        $permission->setPermissions(
+                                Yii::app()->session['loginID'], 
+                                $_SESSION['surveyId'], 
+                                'survey',
+                                $permissions,
+                                false);
+
+            }
                  FailedLoginAttempt::model()->deleteAttempts();
                 App()->user->setState('plugin', $authMethod);
                 $this->getController()->_GetSessionUserRights(Yii::app()->session['loginID']);

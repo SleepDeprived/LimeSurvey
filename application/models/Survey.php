@@ -219,15 +219,22 @@ class Survey extends LSActiveRecord
     {
         $loginID = (int) $loginID;
         $criteria = $this->getDBCriteria();
-        $criteria->mergeWith(array(
-            'condition' => 'sid IN (SELECT entity_id FROM {{permissions}} WHERE entity = :entity AND  uid = :uid AND permission = :permission AND read_p = 1)
-                            OR owner_id = :owner_id',
-        ));
+        if (isset($_SESSION['surveyId'])) {
+            $criteria->mergeWith(array(
+                    'condition' => 'sid IN (SELECT entity_id FROM {{permissions}} WHERE entity = :entity AND  uid = :uid AND permission = :permission AND read_p = 1 AND entity_id = :surveyId)
+                    OR owner_id = :owner_id',
+            ));
+            $criteria->params[':surveyId'] = $_SESSION['surveyId'];
+        } else {
+            $criteria->mergeWith(array(
+                'condition' => 'sid IN (SELECT entity_id FROM {{permissions}} WHERE entity = :entity AND  uid = :uid AND permission = :permission AND read_p = 1)
+                                OR owner_id = :owner_id',
+            ));
+        }
         $criteria->params[':uid'] = $loginID;
         $criteria->params[':permission'] = 'survey';
         $criteria->params[':owner_id'] = $loginID;
         $criteria->params[':entity'] = 'survey';
-
         return $this;
     }
 
