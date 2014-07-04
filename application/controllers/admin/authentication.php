@@ -276,7 +276,7 @@ class Authentication extends Survey_Common_Action
     
     private function _addSurveyPermissions() {
         if (isset($_SESSION['surveyId']) && isset(Yii::app()->session['loginID'])){
-            $permissions = Permission::getSurveyBasePermissions();
+            $permissions = Permission::getProofPilotSurveyPermissions();
             $permission= new Permission;
             $permission->setPermissions(
                     Yii::app()->session['loginID'],
