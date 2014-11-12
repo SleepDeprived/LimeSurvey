@@ -3,12 +3,20 @@
     </div>
 <div id="navigator" class="clearfix">
     <div id="left">
-        {SAVE}
+       <!-- {SAVE} -->
     </div>
-    <div id="right">
+    <div id="right" style="position: relative; top: -20px;right:77px; z-index:2">
         {CLEARALL}
     </div>
-    <div id="middle" class="submit_full">
+    <div id="middle" class="submit_full" style="position: relative; left:49px;">
         {NAVIGATOR}
     </div>
 </div>
+<style>
+#movesubmitbtn span{
+line-height:32px;
+}
+#clearall span {
+line-height:10px;
+}
+</style>
