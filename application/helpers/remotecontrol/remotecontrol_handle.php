@@ -2380,10 +2380,18 @@ class remotecontrol_handle
         if (!$this->_checkSessionKey($sSessionKey)) return array('status' => 'Invalid session key');
         if (!Permission::model()->hasSurveyPermission($iSurveyID, 'responses', 'export')) return array('status' => 'No permission');
         if (!tableExists('{{survey_' . $iSurveyID . '}}')) return array('status' => 'No Data');
-        if(!$oResult = SurveyDynamic::model($iSurveyID)->findByAttributes(array('token' => $sToken))) return array('status' => 'No Response found for Token');
-        if ($oResult['id'])
+        
+        
+        
+        
+        
+        if(!$oResult = SurveyDynamic::model($iSurveyID)->findAllByAttributes(array('token' => $sToken))) return array('status' => 'No Response found for Token');
+        $lastIndex = count($oResult) - 1;
+        
+        
+        if ($oResult[$lastIndex]['id'])
         {
-            return $this->export_responses($sSessionKey, $iSurveyID, $sDocumentType, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType, $oResult['id'], $oResult['id'], $aFields);
+            return $this->export_responses($sSessionKey, $iSurveyID, $sDocumentType, $sLanguageCode, $sCompletionStatus, $sHeadingType, $sResponseType, $oResult[$lastIndex]['id'], $oResult[$lastIndex]['id'], $aFields);
         }
     }
 
