@@ -922,6 +922,7 @@ class SurveyRuntimeHelper {
         echo templatereplace(file_get_contents($sTemplatePath."startpage.pstpl"), array(), $redata);
         $aPopup=array(); // We can move this part where we want now
         if (isset($backpopup))
+//        if (false)
         {
             $aPopup[]=$backpopup;// If user click reload: no need other popup
         }

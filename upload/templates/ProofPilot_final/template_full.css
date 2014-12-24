@@ -435,7 +435,7 @@ table.register,
 
 
 #clearall {
-  margin:20px 12%;
+  /*margin:20px 12%;*/
   border:1px solid #111;
   padding:10px;
   text-align:center;
