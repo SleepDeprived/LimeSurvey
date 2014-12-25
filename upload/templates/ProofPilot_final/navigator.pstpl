@@ -1,22 +1,18 @@
-<div id="prevnext" class="submit_mobile">
-        {NAVIGATOR}
-    </div>
-<div id="navigator" class="clearfix">
-    <div id="left">
-       <!-- {SAVE} -->
-    </div>
-    <div id="right" style="position: relative; top: -20px;right:70px; z-index:2">
-        {CLEARALL}
-    </div>
-    <div id="middle" class="submit_full" style="position: relative; left:-18.5px;">
-        {NAVIGATOR}
-    </div>
-</div>
-<style>
+<!--<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>-->
 
+
+<!--<script>
+$(document).ready(function(){
+$('#movesubmitbtn').wrap('<span class="ui-button-text">')
+})
+</script>-->
+<style>
 #clearall{
+    display:none;
     height: 26px;
-	font-size: 12px;
+	font-size: 9px;
+	height: 30px;
+	width: 113px;
 	border: 1px solid #61a9c5;
 	background: rgb(157,196,210);
 	background: -moz-linear-gradient(top, rgba(157,196,210,1) 0%, rgba(119,159,174,1) 100%);
@@ -42,15 +38,12 @@
     margin:-10px auto;
 }
 #movesubmitbtn{
-    height: 26px;
-	text-align: center;
-	font-weight: 700;
-	color: white;
-	font-size: 12px;
-	border: 1px solid #7ea61f;
-	border-radius: 3px;
-	text-transform: uppercase;
-	width: 100px;
+    border: 1px solid #d3d3d3;
+    font-size: 15px;
+    height: 42px;
+    line-height: 42px;
+    margin: 0;
+    padding: 0 25px;
 	background: rgb(150,196,43);
 	background: -moz-linear-gradient(top, rgba(150,196,43,1) 0%, rgba(127,167,32,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(150,196,43,1)), color-stop(100%,rgba(127,167,32,1)));
@@ -73,6 +66,65 @@
     	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e8f20', endColorstr='#5d7a17',GradientType=0 );
     }
 #movesubmitbtn span {
-    line-height: 18px;
+        line-height: 18px;
+}
+#right{
+        position: relative;
+        top: 50px;
+        right:-14px;
+        z-index:2;
+}
+
+.normal_size {
+        display:block;
+}
+
+
+@media screen and (max-width:996px){
+    #clearall{
+    display:block;
+    }
+    #right{
+        position: static;
+        margin-top: -20px;
+    }
+    #right #clearall{
+        width: 150px;
+        margin: 0 auto 20px;
+
+    }
+    .normal_size{
+        display:none;
+    }
+    #movesubmitbtn{
+    height:53px
+    }
+
 }
 </style>
+
+<div id="prevnext" class="submit_mobile">
+        {NAVIGATOR}
+    </div>
+<div id="navigator" class="clearfix">
+    <div id="left">
+       <!-- {SAVE} -->
+    </div>
+    <div id="right">
+        <a href="#" class="normal_size">Exit and clear survey</a>
+        {CLEARALL}
+    </div>
+    <div id="middle" class="submit_full" style="position: relative; left:55.5px;">
+      {NAVIGATOR}
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+
+$('a.normal_size').on('click', function(e){
+    $('#right #clearall').trigger('click');
+    e.preventDefault();
+    });
+
+});
+</script>
