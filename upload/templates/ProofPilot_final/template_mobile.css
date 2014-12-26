@@ -436,10 +436,11 @@ table.register,
 
 
 #clearall {
-  margin:20px 12%;
+  margin:20px 36%;
   border:1px solid #111;
   padding:10px;
   text-align:center;
+  width: 50%;
 }
 #clearall span.answerscleared {
   color:#ff0f0f;
