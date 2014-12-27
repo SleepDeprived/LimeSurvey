@@ -436,10 +436,18 @@ table.register,
 
 
 #clearall {
-  margin:20px 12%;
-  border:1px solid #111;
   padding:10px;
   text-align:center;
+  background: none;
+  color: #777777 !important;
+  text-decoration: underline !important;
+  float: left;
+  width: auto;
+  margin-left: 50px;
+}
+#clearall:hover {
+  text-decoration: none !important;
+  color: #333333 !important;
 }
 #clearall span.answerscleared {
   color:#ff0f0f;
