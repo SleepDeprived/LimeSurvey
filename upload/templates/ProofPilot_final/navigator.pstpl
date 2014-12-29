@@ -68,13 +68,14 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
 #movesubmitbtn span {
         line-height: 18px;
 }
+/*
 #right{
         position: relative;
         top: 50px;
         right:-14px;
         z-index:2;
 }
-
+*/
 .normal_size {
         display:block;
 }
@@ -83,7 +84,7 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
 @media screen and (max-width:996px){
     /*#clearall{
     display:block;
-    }*/
+        }*/
     #right{
         position: static;
         margin-top: -20px;
