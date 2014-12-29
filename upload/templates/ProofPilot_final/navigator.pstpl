@@ -73,8 +73,9 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
         position: relative;
         // top: 50px;
         // right:20px;
-        right:100px;
+        right:-40px;
         z-index:2;
+        width: 100%;
 }
 
 .normal_size {
@@ -112,12 +113,12 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
     <div id="left">
        <!-- {SAVE} -->
     </div>
+    <div id="middle" class="submit_full" style="position: relative; left:5.5px;">
+      {NAVIGATOR}
+    </div>
     <div id="right">
         <!-- <a href="#" class="normal_size">Exit and clear survey</a> -->
         {CLEARALL}
-    </div>
-    <div id="middle" class="submit_full" style="position: relative; left:5.5px;">
-      {NAVIGATOR}
     </div>
 </div>
 <script>
