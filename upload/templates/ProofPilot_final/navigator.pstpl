@@ -7,7 +7,7 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
 })
 </script>-->
 <style>
-#clearall{
+/*#clearall{
     display:none;
     height: 26px;
 	font-size: 9px;
@@ -36,14 +36,14 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
 
 #clearall span {
     margin:-10px auto;
-}
+}*/
 #movesubmitbtn{
     border: 1px solid #d3d3d3;
     font-size: 15px;
     height: 42px;
     line-height: 42px;
     margin: 0;
-    padding: 0 25px;
+    padding: 0px;
 	background: rgb(150,196,43);
 	background: -moz-linear-gradient(top, rgba(150,196,43,1) 0%, rgba(127,167,32,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(150,196,43,1)), color-stop(100%,rgba(127,167,32,1)));
@@ -81,15 +81,15 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
 
 
 @media screen and (max-width:996px){
-    #clearall{
+    /*#clearall{
     display:block;
-    }
+    }*/
     #right{
         position: static;
         margin-top: -20px;
     }
     #right #clearall{
-        width: 150px;
+        // width: 150px;
         margin: 0 auto 20px;
 
     }
@@ -111,7 +111,7 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
        <!-- {SAVE} -->
     </div>
     <div id="right">
-        <a href="#" class="normal_size">Exit and clear survey</a>
+        <!-- <a href="#" class="normal_size">Exit and clear survey</a> -->
         {CLEARALL}
     </div>
     <div id="middle" class="submit_full" style="position: relative; left:55.5px;">
