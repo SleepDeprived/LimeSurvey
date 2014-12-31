@@ -441,7 +441,7 @@ table.register,
   background: none;
   color: #777777 !important;
   text-decoration: underline !important;
-  float: left;
+  float: right;
   width: auto;
   margin-left: 50px;
 }
