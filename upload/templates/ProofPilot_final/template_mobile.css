@@ -441,7 +441,7 @@ table.register,
   background: none;
   color: #777777 !important;
   text-decoration: underline !important;
-  float: left;
+  float: right;
   width: auto;
   margin-left: 50px;
 }
@@ -836,8 +836,6 @@ font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 700;
 text-transform: uppercase;
-width: 49%;
-float: right;
 }
 
 .submit:hover, input.submit:hover {

@@ -7,43 +7,13 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
 })
 </script>-->
 <style>
-#clearall{
-    display:none;
-    height: 26px;
-	font-size: 9px;
-	height: 30px;
-	width: 113px;
-	border: 1px solid #61a9c5;
-	background: rgb(157,196,210);
-	background: -moz-linear-gradient(top, rgba(157,196,210,1) 0%, rgba(119,159,174,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(157,196,210,1)), color-stop(100%,rgba(119,159,174,1)));
-	background: -webkit-linear-gradient(top, rgba(157,196,210,1) 0%,rgba(119,159,174,1) 100%);
-	background: -o-linear-gradient(top, rgba(157,196,210,1) 0%,rgba(119,159,174,1) 100%);
-	background: -ms-linear-gradient(top, rgba(157,196,210,1) 0%,rgba(119,159,174,1) 100%);
-	background: linear-gradient(to bottom, rgba(157,196,210,1) 0%,rgba(119,159,174,1) 100%);
-}
-
-#clearall:hover{
-    	border-color: #558ca2;
-    	background: #6e8993;
-    	background: -moz-linear-gradient(top, #6e8993 0%, #526e79 100%);
-    	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6e8993), color-stop(100%,#526e79));
-    	background: -webkit-linear-gradient(top, #6e8993 0%,#526e79 100%);
-    	background: -o-linear-gradient(top, #6e8993 0%,#526e79 100%);
-    	background: -ms-linear-gradient(top, #6e8993 0%,#526e79 100%);
-    	background: linear-gradient(to bottom, #6e8993 0%,#526e79 100%);
-}
-
-#clearall span {
-    margin:-10px auto;
-}
 #movesubmitbtn{
     border: 1px solid #d3d3d3;
     font-size: 15px;
     height: 42px;
     line-height: 42px;
     margin: 0;
-    padding: 0 25px;
+    padding: 0px;
 	background: rgb(150,196,43);
 	background: -moz-linear-gradient(top, rgba(150,196,43,1) 0%, rgba(127,167,32,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(150,196,43,1)), color-stop(100%,rgba(127,167,32,1)));
@@ -68,11 +38,12 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
 #movesubmitbtn span {
         line-height: 18px;
 }
+
 #right{
         position: relative;
-        top: 50px;
-        right:-14px;
+        right:-40px;
         z-index:2;
+        width: 100%;
 }
 
 .normal_size {
@@ -81,15 +52,12 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
 
 
 @media screen and (max-width:996px){
-    #clearall{
-    display:block;
-    }
     #right{
         position: static;
         margin-top: -20px;
     }
     #right #clearall{
-        width: 150px;
+        // width: 150px;
         margin: 0 auto 20px;
 
     }
@@ -110,12 +78,11 @@ $('#movesubmitbtn').wrap('<span class="ui-button-text">')
     <div id="left">
        <!-- {SAVE} -->
     </div>
-    <div id="right">
-        <a href="#" class="normal_size">Exit and clear survey</a>
-        {CLEARALL}
-    </div>
-    <div id="middle" class="submit_full" style="position: relative; left:55.5px;">
+    <div id="middle" class="submit_full" style="position: relative; left:5.5px;">
       {NAVIGATOR}
+    </div>
+    <div id="right">
+        {CLEARALL}
     </div>
 </div>
 <script>
