@@ -32,9 +32,6 @@
 <body class="lang-{SURVEYLANGUAGE} {SURVEYFORMAT}">
 <script type="text/javascript">
 
-//$(document).on('change', '.ui-datepicker-year', function(){
-//    alert('aha');
-//})
 $(document).ready(function(){
     $('button.ui-datepicker-trigger, input.popupdate.hasDatepicker').on('click', function(){
         var input = $(this);
