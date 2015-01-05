@@ -30,6 +30,25 @@
 
 
 <body class="lang-{SURVEYLANGUAGE} {SURVEYFORMAT}">
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $('button.ui-datepicker-trigger, input.popupdate.hasDatepicker').on('click', function(){
+        var input = $(this);
+        $('.ui-datepicker-year').change(function() {
+            var a = $('.ui-datepicker-year').parent().parent().siblings('table').find('a:first');
+            a.click();
+            input.click();
+        })
+        $('.ui-datepicker-month').change(function() {
+            var a = $('.ui-datepicker-year').parent().parent().siblings('table').find('a:first');
+            a.click();
+            input.click();
+        })
+    });
+});
+
+</script>
 
 <div id="outer-wrapper">
 
