@@ -1,7 +1,6 @@
 <div {QUESTION_ESSENTIALS} class="question-wrapper clearfix {QUESTION_CLASS}{QUESTION_MAN_CLASS}{QUESTION_INPUT_ERROR_CLASS}">
     <div class="questiontext">
-        <span class="asterisk">{QUESTION_MANDATORY}</span>
-        <span class="qnumcode">{QUESTION_NUMBER} {QUESTION_CODE} </span>
+        <div class="qnumcode"><span class="asterisk">{QUESTION_MANDATORY}</span>{QUESTION_NUMBER} {QUESTION_CODE} </div>
         {QUESTION_TEXT}
         <span class="questionhelp">{QUESTION_HELP}</span>
         {QUESTION_MAN_MESSAGE}

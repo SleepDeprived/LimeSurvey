@@ -1459,7 +1459,7 @@ table.question thead th,
   table.question tbody tr.repeat th {
   padding:2px 5px;
   text-align:center;
-  vertical-align:bottom;
+  vertical-align:top;
 }
 table.question tbody th.answertext { /* Predifined answer */
   padding:5px 7px;
