@@ -78,7 +78,7 @@
                         <option value='30'
                             <?php if ($thisupdatecheckperiod==30) { echo "selected='selected'";} ?>
                             ><?php echo $clang->eT("Every month"); ?></option>
-                    </select>&nbsp;<input type='button' onclick="window.open('<?php echo $this->createUrl("admin/globalsettings/sa/updatecheck"); ?>', '_top')" value='<?php $clang->eT("Check now"); ?>' />&nbsp;<span id='lastupdatecheck'><?php echo sprintf($clang->gT("Last check: %s"),$updatelastcheck); ?></span>
+                    </select>&nbsp;<input type='button' onclick="window.location = '<?php echo $this->createUrl("admin/globalsettings/sa/updatecheck"); ?>'" value='<?php $clang->eT("Check now"); ?>' />&nbsp;<span id='lastupdatecheck'><?php echo sprintf($clang->gT("Last check: %s"),$updatelastcheck); ?></span>
                 </li>
                 <li><label for='updatenotification'><?php echo $clang->eT("Show update notifications:"); ?></label>
                     <select name='updatenotification' id='updatenotification'>
@@ -104,9 +104,9 @@
                             <?php echo $aUpdateVersion['versionnumber'];?> (<?php echo $aUpdateVersion['build'];?>) <?php if ($aUpdateVersion['branch']!='master') $clang->eT('(unstable)'); else $clang->eT('(stable)');?>
                            </td>
                            <td>
-                                <input type='button' onclick="window.open('<?php echo $this->createUrl("admin/update/sa/index",array('build'=>$aUpdateVersion['build'])); ?>', '_top')" value='<?php $clang->eT("Use ComfortUpdate"); ?>' />
-                                <?php if ($aUpdateVersion['branch']!='master') {?> <input type='button' onclick="window.open('http://www.limesurvey.org/en/unstable-release/viewcategory/26-unstable-releases', '_blank')" value='<?php $clang->eT("Download"); ?>' /> <?php } 
-                                else {?> <input type='button' onclick="window.open('http://www.limesurvey.org/en/stable-release', '_blank')" value='<?php $clang->eT("Download"); ?>' /> <?php }?>
+                                <input type='button' onclick="window.location = '<?php echo $this->createUrl("admin/update/sa/index",array('build'=>$aUpdateVersion['build'])); ?>'" value='<?php $clang->eT("Use ComfortUpdate"); ?>' />
+                                <?php if ($aUpdateVersion['branch']!='master') {?> <input type='button' onclick="window.location = 'http://www.limesurvey.org/en/unstable-release/viewcategory/26-unstable-releases')" value='<?php $clang->eT("Download"); ?>' /> <?php }
+                                else {?> <input type='button' onclick="window.location = 'http://www.limesurvey.org/en/stable-release'" value='<?php $clang->eT("Download"); ?>' /> <?php }?>
                            </td></tr>
                         <?php    
                         };?>

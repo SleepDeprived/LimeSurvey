@@ -71,7 +71,7 @@
     </div>
     <div class='menubar-right'>
         <label for="questionid"><?php $clang->eT("Questions:"); ?></label> <select class="listboxquestions" name='questionid' id='questionid'
-            onchange="window.open(this.options[this.selectedIndex].value, '_top')">
+            onchange="window.location = this.options[this.selectedIndex].value">
 
             <?php echo getQuestions($surveyid,$gid,$qid); ?>
         </select>
