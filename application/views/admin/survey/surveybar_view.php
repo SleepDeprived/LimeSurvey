@@ -271,7 +271,7 @@
             <?php if ($permission)
                 { ?>
                 <label for='groupselect'><?php $clang->eT("Question groups:"); ?></label>
-                <select name='groupselect' id='groupselect' onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                <select name='groupselect' id='groupselect' onchange="window.location = this.options[this.selectedIndex].value">
 
                     <?php echo $groups; ?>
                 </select>
