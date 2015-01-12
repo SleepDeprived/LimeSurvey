@@ -186,7 +186,7 @@ if ($adding || $copying) {
                                         $groups[$questionType['group']] = array();
                                     }
                                     $description = $questionType['description'];
-                                    if(isQuestionTypeSupported($key)) { $description = "<span style=\"color:red\">*</span> " . $description; }
+                                    if(isQuestionTypeSupported($key)) { $description = "<span style=\"color:red; display: inline\">*</span> " . $description; }
                                     $groups[$questionType['group']][$key] = $description;
                                 }
                                 $this->widget('ext.bootstrap.widgets.TbSelect2', array(
