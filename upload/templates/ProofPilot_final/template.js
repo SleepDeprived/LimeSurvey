@@ -36,10 +36,10 @@ function focusFirst(Event)
 
 /* Uncomment below if you want to use the focusFirst function */
 /*
-$(document).ready(function(){
-	focusFirst();
-});
-*/
+ $(document).ready(function(){
+ focusFirst();
+ });
+ */
 
 
 
@@ -47,7 +47,7 @@ function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
 {
     var arVersion = navigator.appVersion.split("MSIE")
     var version = parseFloat(arVersion[1])
-    if ((version >= 5.5) && (version < 7) && (document.body.filters)) 
+    if ((version >= 5.5) && (version < 7) && (document.body.filters))
     {
         for (var i = 0; i < document.images.length; i++)
         {
@@ -59,16 +59,16 @@ function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
                 var imgClass = (img.className) ? "class='" + img.className + "' " : "";
                 var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' ";
                 var imgStyle = "display:inline-block;" + img.style.cssText;
-                if (img.align == "left") 
+                if (img.align == "left")
                     imgStyle = "float:left;" + imgStyle;
-                if (img.align == "right") 
+                if (img.align == "right")
                     imgStyle = "float:right;" + imgStyle;
-                if (img.parentElement.href) 
+                if (img.parentElement.href)
                     imgStyle = "cursor:hand;" + imgStyle;
                 var strNewHTML = "<span " + imgID + imgClass + imgTitle
-                + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
-                + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
-                + "(src='" + img.src + "', sizingMethod='scale');\"></span>" 
+                    + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+                    + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+                    + "(src='" + img.src + "', sizingMethod='scale');\"></span>"
                 img.outerHTML = strNewHTML
                 i = i-1
             }
@@ -76,21 +76,25 @@ function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
     }
 }
 
-$(document).ready(function() {
-
-    //Check for input errors
-    $("div[id^='question']").each(function() {
-        if ( $(this).hasClass("input-error") ) {
+function errorNotification(questiondiv){
+    if (!$("#surveydata").siblings('div').hasClass('notification')) {
+        if (questiondiv.hasClass("input-error")) {
 
             $("#surveydata").after("<div class='notification'><div class='error-notification'>*Please scroll down to see items needing attention.* <!--<br/> <a href='javascript:void(0);' onClick='goToFirstInputError();'>Click here to go to the first item.</a>--></div></div>");
 
-            if ( $("td.notification").length > 0 ) {
+            if ($("td.notification").length > 0) {
                 $("html, body").animate({
-                    scrollTop: $(".notification").offset().top 
+                    scrollTop: $(".notification").offset().top
                 }, 1000);
             }
             return false;
         }
+    }
+}
+
+$(document).ready(function() {
+    $("div[id^='question']").each(function() {
+        errorNotification($(this));
 
     });
 
@@ -120,18 +124,18 @@ $(document).ready(function() {
 
     $("#answer187572X765X8001").bind("change paste keyup", function() {
         var strollers = $(this).val();
-        if (strollers > 10) 
+        if (strollers > 10)
             strollers = 10;
 
         hideallstrollers();
 
-        if (strollers >= 1) 
+        if (strollers >= 1)
             $("#question7989").show();
 
         for (i = 1; i <= strollers; i++) {
-            if (i <= 9) 
+            if (i <= 9)
                 $("#javatbd187572X765X7989SQ00" + i).show();
-            else 
+            else
                 $("#javatbd187572X765X7989SQ0" + i).show();
         }
     });
@@ -170,15 +174,15 @@ $(document).ready(function() {
 
     var brands = getdigits(content);
 
-    if (brands > 10) 
+    if (brands > 10)
         brands = 10;
 
     hideallBrandAwareness();
 
     for (i = 1; i <= brands; i++) {
-        if (i <= 9) 
+        if (i <= 9)
             $("#javatbd187572X766X8002SQ00" + i).show();
-        else 
+        else
             $("#javatbd187572X766X8002SQ0" + i).show();
     }
 });
@@ -374,7 +378,7 @@ $( document ).ready(function() {
                 update7166($('label[for=answer272135X714X7165A6]').text());
             });
             $('#SOTH272135X714X7165').click(function() {
-                update7166("Your above answer (7166)") 
+                update7166("Your above answer (7166)")
             });
 
             $('#answer272135X714X7165othertext').keyup(function () {
@@ -396,7 +400,6 @@ $( document ).ready(function() {
     });
 
 });
-
 
 
 
