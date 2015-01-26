@@ -123,7 +123,7 @@
         <input id='MinimizeGroupWindow' type='image' src='<?php echo $imageurl; ?>minimize.png' title='<?php $clang->eT("Hide details of this group"); ?>' alt='<?php $clang->eT("Hide details of this group"); ?>' />
         <input type='image' id='MaximizeGroupWindow' src='<?php echo $imageurl; ?>maximize.png' title='<?php $clang->eT("Show details of this group"); ?>' alt='<?php $clang->eT("Show details of this group"); ?>' />
         <input type='image' src='<?php echo $imageurl; ?>close.png' title='<?php $clang->eT("Close this group"); ?>' alt='<?php $clang->eT("Close this group"); ?>'
-            onclick="window.open('<?php echo $this->createUrl("admin/survey/sa/view/surveyid/".$surveyid); ?>','_top');"
+            onclick="window.location = '<?php echo $this->createUrl("admin/survey/sa/view/surveyid/".$surveyid); ?>';"
             <?php if (!$qid){?>
                 style='visibility:hidden;'
                 <?php } ?>
