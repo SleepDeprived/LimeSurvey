@@ -1352,7 +1352,7 @@ function do_date($ia)
             </span>
         </span>
 
-        <input class=\"hidInput\" type='hidden' name=\"{$ia[1]}\" id=\"answer{$ia[1]}\" value=\"$dateoutput\" ><span id=\"bDate{$ia[1]}\" class=\"b-Date\"></span>
+        <input class=\"hidInput\" type='hidden' name=\"{$ia[1]}\" id=\"mobile_answer{$ia[1]}\" value=\"$dateoutput\" ><span id=\"bDate{$ia[1]}\" class=\"b-Date\"></span>
         </span>
         <div class=\"errormassage\" style=\"color: #ff0f0f; font-size: 95%; font-weight: 700; margin-top:10px\"></div>
     </p>
@@ -1401,12 +1401,14 @@ function do_date($ia)
             var sClass = $(this).attr('id');
             var sHtml = $(this).val();
             $('#bDate{$ia[1]}  > span.'+sClass).html(sHtml);
-           // $('input#answer{$ia[1]}').val($('#bDate{$ia[1]} ').text()+'-'+$('#bDate{$ia[1]} .s-month').text()+'-'+$('#bDate{$ia[1]} .s-day').text());
-            $('input#answer{$ia[1]}').val($('#bDate{$ia[1]} ').text());
+           // $('input#mobile_answer{$ia[1]}').val($('#bDate{$ia[1]} ').text()+'-'+$('#bDate{$ia[1]} .s-month').text()+'-'+$('#bDate{$ia[1]} .s-day').text());
+            $('input#mobile_answer{$ia[1]}').val($('#bDate{$ia[1]} ').text());
         \});
 
         $(document).on('click', '#limesurvey #movesubmitbtn, #limesurvey #movenextbtn', function(e)\{
-
+            if  ($('input#answer{$ia[1]}').val()!='')\{
+                $('input#mobile_answer{$ia[1]}').remove();
+            \}
             var spanYear, spanMonth, spanDay;
             spanYear = +($('#bDate{$ia[1]}').find('.s-year').text());
             spanMonth = +($('#bDate{$ia[1]}').find('.s-month').text());
