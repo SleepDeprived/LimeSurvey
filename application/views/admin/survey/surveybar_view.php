@@ -329,7 +329,7 @@
 
 
             <input type='image' src='<?php echo $sImageURL; ?>close.png' title='<?php $clang->eT("Close this survey"); ?>'
-                alt='<?php $clang->eT("Close this survey"); ?>' onclick="window.open('<?php echo $this->createUrl("/admin/index"); ?>','_top');"
+                alt='<?php $clang->eT("Close this survey"); ?>' onclick="window.location = '<?php echo $this->createUrl("/admin/index"); ?>';"
 
                 <?php if (!$gid){?>
                     style='visibility:hidden;'
