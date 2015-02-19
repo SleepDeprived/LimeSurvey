@@ -1290,17 +1290,164 @@ function do_date($ia)
         $goodchars = "0123456789".substr($goodchars,0,1);
         // "+1" makes room for a trailing space in date/time values
         $iLength=strlen($dateformatdetails['dateformat'])+1;
-
+        $mindate = new DateTime();
+        $mindate = $mindate->modify('-100 year')->format('Y');
+        $maxdate = new DateTime();
+        $maxdate = $maxdate->format('Y');
 
         // HTML for date question using datepicker
-        $answer="<p class='question answer-item text-item date-item'><label for='answer{$ia[1]}' class='hide label'>{$clang->gT('Date picker')}</label>
-        <input class='popupdate' type=\"text\" size=\"{$iLength}\" name=\"{$ia[1]}\" title='".sprintf($clang->gT('Format: %s'),$dateformatdetails['dateformat'])."' id=\"answer{$ia[1]}\" value=\"$dateoutput\" maxlength=\"{$iLength}\" onkeypress=\"return goodchars(event,'".$goodchars."')\" onchange=\"$checkconditionFunction(this.value, this.name, this.type)\" />
+        $answer="
+    <p class='question answer-item text-item date-item {$ia[1]}'>
+        <label for='answer{$ia[1]}' class='hide label'>{$clang->gT('Date picker')}</label>
+        <span class=\"full-date\"><input class='popupdate' type=\"text\" size=\"{$iLength}\" name=\"{$ia[1]}\" title='".sprintf($clang->gT('Format: %s'),$dateformatdetails['dateformat'])."' id=\"answer{$ia[1]}\" value=\"$dateoutput\" maxlength=\"{$iLength}\" onkeypress=\"return goodchars(event,'".$goodchars."')\" onchange=\"$checkconditionFunction(this.value, this.name, this.type)\" />
         <input  type='hidden' name='dateformat{$ia[1]}' id='dateformat{$ia[1]}' value='{$dateformatdetails['jsdate']}'  />
         <input  type='hidden' name='datelanguage{$ia[1]}' id='datelanguage{$ia[1]}' value='{$clang->langcode}'  />
         <input  type='hidden' name='datemin{$ia[1]}' id='datemin{$ia[1]}' value=\"{$mindate}\"    />
-        <input  type='hidden' name='datemax{$ia[1]}' id='datemax{$ia[1]}' value=\"{$maxdate}\"   />
-        </p>";
+        <input  type='hidden' name='datemax{$ia[1]}' id='datemax{$ia[1]}' value=\"{$maxdate}\"   /></span>
+        <span class=\"mobile-date\">
+        <span class=\"delete_date\">
+            <span id=\"span-year\">
+                <select class=\"dateSelect\" id=\"s-year\">
+                    <option disabled selected value=\"default\">Year</option>
+                    <script>
+                        var objDate = new Date();
+                        var thisYear = objDate.getFullYear();
+                        var year = [];
+                        for(var i = thisYear-100; i <=thisYear; i++){
+                            year.push('<option value='+i+'>'+i+'</option>');
+                        }
+                        $('p.{$ia[1]}').find('#span-year').children('select').append(year);
+                    </script>
+                </select>
+            </span>
+            <span id=\"span-month\" >
+                <select class=\"dateSelect\" id=\"s-month\">
+                    <option disabled selected value=\"default\">Month</option>
+                    <script>
+                        var month = [];
+                        for(var i = 1; i <=9; i++){
+                            month.push('<option value=0'+i+'>0'+i+'</option>');
+                        }
+                        for(var i = 10; i <=12; i++){
+                            month.push('<option value='+i+'>'+i+'</option>');
+                        }
+                        $('p.{$ia[1]}').find('#span-month').children('select').append(month);
+                    </script>
+                </select>
+            </span>
+            <span id=\"span-day\">
+                <select class=\"dateSelect\" id=\"s-day\">
+                    <option disabled selected value=\"default\">Day</option>
+                    <script>
+                        var days = []
+                        for(var i = 1; i <=9; i++){
+                            days.push('<option value=0'+i+'>0'+i+'</option>');
+                        }
+                        for(var i = 10; i <=31; i++){
+                            days.push('<option value='+i+'>'+i+'</option>');
+                        }
+                        $('p.{$ia[1]}').find('#span-day').children('select').append(days);
+                    </script>
+                </select>
+            </span>
+        </span>
 
+        <input class=\"hidInput\" type='hidden' name=\"{$ia[1]}\" id=\"mobile_answer{$ia[1]}\" value=\"$dateoutput\" ><span id=\"bDate{$ia[1]}\" class=\"b-Date\"></span>
+        </span>
+        <div class=\"errormassage\" style=\"color: #ff0f0f; font-size: 95%; font-weight: 700; margin-top:10px\"></div>
+    </p>
+    <script>
+        var parentP = $('.{$ia[1]}'),
+            dateFormat = '{$dateformatdetails['dateformat']}';
+        var spans = ['<span class=\"s-year\">YYYY</span>', '<span class=\"s-month\">MM</span>', '<span class=\"s-day\">DD</span>']
+        var sYear = parentP.find('.delete_date').children('#span-year').html(),
+            sMonth = parentP.find('.delete_date').children('#span-month').html(),
+            sDay = parentP.find('.delete_date').children('#span-day').html();
+        var regexp = /(y|m|d)+(-|\.|\/)(y|m|d)+(-|\.|\/)(y|m|d)+/;
+
+        var found = dateFormat.match(regexp);
+        var foundFormat = found[1]+found[3]+found[5];
+
+      parentP.find('.delete_date').empty();
+
+        switch(foundFormat){
+            case 'ymd':
+                parentP.find('.delete_date').append(sYear+sMonth+sDay);
+                $('#bDate{$ia[1]}').append(spans[0]+found[2]+spans[1]+found[2]+spans[2]);
+                break;
+            case 'mdy':
+                parentP.find('.delete_date').append(sMonth+sDay+sYear);
+                $('#bDate{$ia[1]}').append(spans[1]+found[2]+spans[2]+found[2]+spans[0]);
+                break;
+            case 'dmy':
+                parentP.find('.delete_date').append(sDay+sMonth+sYear);
+                $('#bDate{$ia[1]}').append(spans[2]+found[2]+spans[1]+found[2]+spans[0]);
+                break;
+
+        }
+        var dateoutput = '{$dateoutput}';
+        if (dateoutput){
+         var dbRegexp = /(\d*)(.)(\d*)(.)(\d*)/;
+         var dbFound = dateoutput.match(dbRegexp);
+         var dbFoundFormat = dbFound[1]+dbFound[3]+dbFound[5];
+             parentP.find('.b-Date').find('span').eq(0).text(dbFound[1]);
+             parentP.find('.b-Date').find('span').eq(1).text(dbFound[3]);
+             parentP.find('.b-Date').find('span').eq(2).text(dbFound[5]);
+             parentP.find('select').eq(0).val(dbFound[1]);
+             parentP.find('select').eq(1).val(dbFound[3]);
+             parentP.find('select').eq(2).val(dbFound[5]);
+        };
+        $('.{$ia[1]}').find('.dateSelect').on('change', function()\{
+            var sClass = $(this).attr('id');
+            var sHtml = $(this).val();
+            $('#bDate{$ia[1]}  > span.'+sClass).html(sHtml);
+           // $('input#mobile_answer{$ia[1]}').val($('#bDate{$ia[1]} ').text()+'-'+$('#bDate{$ia[1]} .s-month').text()+'-'+$('#bDate{$ia[1]} .s-day').text());
+            $('input#mobile_answer{$ia[1]}').val($('#bDate{$ia[1]} ').text());
+        \});
+
+        $(document).on('click', '#limesurvey #movesubmitbtn, #limesurvey #movenextbtn', function(e)\{
+            if  ($('input#answer{$ia[1]}').val()!='')\{
+                $('input#mobile_answer{$ia[1]}').remove();
+            \}
+            var spanYear, spanMonth, spanDay;
+            spanYear = +($('#bDate{$ia[1]}').find('.s-year').text());
+            spanMonth = +($('#bDate{$ia[1]}').find('.s-month').text());
+            spanDay = +($('#bDate{$ia[1]}').find('.s-day').text());
+            $(this).removeClass('active');
+            $('.button.ui-button' ).not($(this)).button( 'option', 'disabled', false );
+
+            if (!isNaN(spanYear) || !isNaN(spanMonth) || !isNaN(spanDay) )\{
+
+                var sError = [];
+                if(isNaN(spanYear))\{
+                    sError.push('Please select year. </br>');
+                \}
+                if(isNaN(spanMonth))\{
+                    sError.push('Please select month. </br>');
+                \}
+                if(isNaN(spanDay))\{
+                    sError.push('Please select day. </br>');
+                \}
+                if(sError.length != 0)\{
+                     $('.{$ia[1]}').siblings('.errormassage').html(sError).show('slow');
+
+                     $('#question{$ia[0]}').addClass('input-error');
+                     errorNotification($('#question{$ia[0]}'));
+                     $('#question{$ia[0]} .errormandatory').parent('strong').remove();
+                    return false;
+                    e.preventDefault();
+                \}else \{
+                    $('#question{$ia[0]} .errormandatory').parent('strong').remove();
+                    $('.{$ia[1]}').siblings('.errormassage').html('');
+                    return;
+                \}
+            \}
+            $('.{$ia[1]}').siblings('.errormassage').html('');
+
+            return;
+         \});
+    </script>
+";
         // adds min and max date as a hidden element to the page so EM creates the needed LEM_tailor_Q_XX sections 
         $sHiddenHtml="";
         if (!empty($sMindatetailor))

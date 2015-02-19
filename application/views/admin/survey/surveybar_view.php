@@ -271,7 +271,7 @@
             <?php if ($permission)
                 { ?>
                 <label for='groupselect'><?php $clang->eT("Question groups:"); ?></label>
-                <select name='groupselect' id='groupselect' onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                <select name='groupselect' id='groupselect' onchange="window.location = this.options[this.selectedIndex].value">
 
                     <?php echo $groups; ?>
                 </select>
@@ -329,7 +329,7 @@
 
 
             <input type='image' src='<?php echo $sImageURL; ?>close.png' title='<?php $clang->eT("Close this survey"); ?>'
-                alt='<?php $clang->eT("Close this survey"); ?>' onclick="window.open('<?php echo $this->createUrl("/admin/index"); ?>','_top');"
+                alt='<?php $clang->eT("Close this survey"); ?>' onclick="window.location = '<?php echo $this->createUrl("/admin/index"); ?>';"
 
                 <?php if (!$gid){?>
                     style='visibility:hidden;'

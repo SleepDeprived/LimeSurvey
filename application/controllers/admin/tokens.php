@@ -819,7 +819,7 @@ class tokens extends Survey_Common_Action
                 $this->_renderWrappedTemplate('token', array('tokenbar', 'message' => array(
                 'title' => $clang->gT("Success"),
                 'message' => $clang->gT("The token entry was successfully updated.") . "<br /><br />\n"
-                . "\t\t<input type='button' value='" . $clang->gT("Display tokens") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/browse/surveyid/$iSurveyId/") . "', '_top')\" />\n"
+                . "\t\t<input type='button' value='" . $clang->gT("Display tokens") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/browse/surveyid/$iSurveyId/") . "'\" />\n"
                 )), $aData);
             }
             else
@@ -827,7 +827,7 @@ class tokens extends Survey_Common_Action
                 $this->_renderWrappedTemplate('token', array('tokenbar', 'message' => array(
                 'title' => $clang->gT("Failed"),
                 'message' => $clang->gT("There is already an entry with that exact token in the table. The same token cannot be used in multiple entries.") . "<br /><br />\n"
-                . "\t\t<input type='button' value='" . $clang->gT("Show this token entry") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/edit/surveyid/$iSurveyId/tokenid/$iTokenId") . "', '_top')\" />\n"
+                . "\t\t<input type='button' value='" . $clang->gT("Show this token entry") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/edit/surveyid/$iSurveyId/tokenid/$iTokenId") . "'\" />\n"
                 )));
             }
         }
@@ -989,7 +989,7 @@ class tokens extends Survey_Common_Action
                 $aData['success'] = false;
                 $message=array('title' => $clang->gT("Success"),
                 'message' => $clang->gT("New dummy tokens were added.") . "<br /><br />\n<input type='button' value='"
-                . $clang->gT("Display tokens") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/browse/surveyid/$iSurveyId") . "', '_top')\" />\n"
+                . $clang->gT("Display tokens") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/browse/surveyid/$iSurveyId") . "'\" />\n"
                 );
             }
             else
@@ -1000,7 +1000,7 @@ class tokens extends Survey_Common_Action
                 'message' => "<p>".sprintf($clang->gT("Only %s new dummy tokens were added after %s trials."),$newDummyToken,$invalidtokencount)
                 .$clang->gT("Try with a bigger token length.")."</p>"
                 ."\n<input type='button' value='"
-                . $clang->gT("Display tokens") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/browse/surveyid/$iSurveyId") . "', '_top')\" />\n"
+                . $clang->gT("Display tokens") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/browse/surveyid/$iSurveyId") . "'\" />\n"
                 );
             }
             $this->_renderWrappedTemplate('token',  array('tokenbar','message' => $message),$aData);
@@ -1222,7 +1222,7 @@ class tokens extends Survey_Common_Action
         $aData['surveyid'] = $iSurveyId;
         $this->_renderWrappedTemplate('token', array('tokenbar', 'message' => array(
         'title' => $clang->gT('Token attribute descriptions were successfully updated.'),
-        'message' => "<br /><input type='button' value='" . $clang->gT('Back to attribute field management.') . "' onclick=\"window.open('" . $this->getController()->createUrl("/admin/tokens/sa/managetokenattributes/surveyid/$iSurveyId") . "', '_top')\" />"
+        'message' => "<br /><input type='button' value='" . $clang->gT('Back to attribute field management.') . "' onclick=\"window.location = '" . $this->getController()->createUrl("/admin/tokens/sa/managetokenattributes/surveyid/$iSurveyId") . "'\" />"
         )), $aData);
     }
 
@@ -2175,7 +2175,7 @@ class tokens extends Survey_Common_Action
             . "<input type='submit' value='"
             . $clang->gT("Yes") . "' onclick=\"" . convertGETtoPOST($this->getController()->createUrl("admin/tokens/sa/tokenify/surveyid/$iSurveyId", array('ok'=>'Y'))) . "\" />\n"
             . "<input type='submit' value='"
-            . $clang->gT("No") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/index/surveyid/$iSurveyId") . "', '_top')\" />\n"
+            . $clang->gT("No") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/index/surveyid/$iSurveyId") . "'\" />\n"
             . "<br />\n"
             )), $aData);
         }
@@ -2237,9 +2237,9 @@ class tokens extends Survey_Common_Action
             'message' => $clang->gT("If you delete this table tokens will no longer be required to access this survey.") . "<br />" . $clang->gT("A backup of this table will be made if you proceed. Your system administrator will be able to access this table.") . "<br />\n"
             . sprintf('("%s")<br /><br />', $newtableDisplay)
             . "<input type='submit' value='"
-            . $clang->gT("Delete Tokens") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/kill/surveyid/{$iSurveyId}/ok/Y") . "', '_top')\" />\n"
+            . $clang->gT("Delete Tokens") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/kill/surveyid/{$iSurveyId}/ok/Y") . "'\" />\n"
             . "<input type='submit' value='"
-            . $clang->gT("Cancel") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/index/surveyid/{$iSurveyId}") . "', '_top')\" />\n"
+            . $clang->gT("Cancel") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/index/surveyid/{$iSurveyId}") . "'\" />\n"
             )), $aData);
         }
         else
@@ -2255,7 +2255,7 @@ class tokens extends Survey_Common_Action
             'message' => '<br />' . $clang->gT("The tokens table has now been removed and tokens are no longer required to access this survey.") . "<br /> " . $clang->gT("A backup of this table has been made and can be accessed by your system administrator.") . "<br />\n"
             . sprintf('("%s")<br /><br />', $newtableDisplay)
             . "<input type='submit' value='"
-            . $clang->gT("Main Admin Screen") . "' onclick=\"window.open('" . Yii::app()->getController()->createUrl("admin/survey/sa/view/surveyid/".$iSurveyId) . "', '_top')\" />"
+            . $clang->gT("Main Admin Screen") . "' onclick=\"window.location = '" . Yii::app()->getController()->createUrl("admin/survey/sa/view/surveyid/".$iSurveyId) . "'\" />"
             )), $aData);
 
             LimeExpressionManager::SetDirtyFlag();  // so that knows that token tables have changed
@@ -2395,7 +2395,7 @@ class tokens extends Survey_Common_Action
             'title' => $clang->gT("Token control"),
             'message' => $clang->gT("A token table has been created for this survey.") . " (\"" . Yii::app()->db->tablePrefix . "tokens_$iSurveyId\")<br /><br />\n"
             . "<input type='submit' value='"
-            . $clang->gT("Continue") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/index/surveyid/$iSurveyId") . "', '_top')\" />\n"
+            . $clang->gT("Continue") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/index/surveyid/$iSurveyId") . "'\" />\n"
             )));
         }
         /* Restore a previously deleted tokens table */
@@ -2439,7 +2439,7 @@ class tokens extends Survey_Common_Action
             'title' => $clang->gT("Import old tokens"),
             'message' => $clang->gT("A token table has been created for this survey and the old tokens were imported.") . " (\"" . Yii::app()->db->tablePrefix . "tokens_$iSurveyId" . "\")<br /><br />\n"
             . "<input type='submit' value='"
-            . $clang->gT("Continue") . "' onclick=\"window.open('" . $this->getController()->createUrl("admin/tokens/sa/index/surveyid/$iSurveyId") . "', '_top')\" />\n"
+            . $clang->gT("Continue") . "' onclick=\"window.location = '" . $this->getController()->createUrl("admin/tokens/sa/index/surveyid/$iSurveyId") . "'\" />\n"
             )));
 
             LimeExpressionManager::SetDirtyFlag();  // so that knows that token tables have changed

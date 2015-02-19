@@ -1,9 +1,21 @@
-<div class="percentcomplete">{PERCENTCOMPLETE}</div>  
+
+<!----------------------------START: media queries--------------------------->
+<style>
+@media screen and (max-width: 998px){
+    #pc_completed{
+    display:none;
+    }
+}
+</style>
+<!----------------------------END: media queries--------------------------->
+<div class="percentcomplete">{PERCENTCOMPLETE}</div>
 
 <div id="completed">
+<div id="pc_completed">
     {COMPLETED}<br /><br />
+</div>
     <div class="mobile_complited">
-    	<div id="about"></div>
+    	<!--<div id="about"></div>-->
   		<div id="content">
     		{COMPLETED}
     	</div>

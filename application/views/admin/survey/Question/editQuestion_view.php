@@ -1,4 +1,26 @@
 <?php
+
+function isQuestionTypeSupported($questionType) {
+    switch($questionType) {
+        case '5': //5 point choice
+        case '!': //List (dropdown)
+        case 'L': //List (radio)
+        case 'O': //List with comments (comments ignored)
+        case 'M': //Multiple choice questions
+        case 'P': //Multiple choice questions (with comments)
+        case 'N': //Numerical
+        case 'S': //Short free text
+        case 'Y': //Single choice
+        case 'D': //Date
+            return true;
+        default:
+            return false;
+    };
+};
+
+
+
+
 // Surely better in controller
 if ($adding || $copying) {
     $sValidateUrl=$this->createUrl('admin/questions', array('sa' => 'ajaxValidate','surveyid'=>$surveyid));
@@ -10,7 +32,62 @@ if ($adding || $copying) {
     var attr_url = "<?php echo $this->createUrl('admin/questions', array('sa' => 'ajaxquestionattributes')); ?>";
     var imgurl = '<?php echo Yii::app()->getConfig('imageurl'); ?>';
     var validateUrl = "<?php echo $sValidateUrl; ?>";
+
+    function isQuestionTypeSupported(questionType) {
+        switch(questionType) {
+            case '5': //5 point choice
+            case '!': //List (dropdown)
+            case 'L': //List (radio)
+            case 'O': //List with comments (comments ignored)
+            case 'M': //Multiple choice questions
+            case 'P': //Multiple choice questions (with comments)
+            case 'N': //Numerical
+            case 'S': //Short free text
+            case 'Y': //Single choice
+            case 'D': //Date
+                return true;
+            default:
+                return false;
+        };
+    };
+
+    function formatResult(item) {
+        if (!item.id) return item.text; // optgroup
+
+        if(isQuestionTypeSupported(item.id))
+            return "<span style='color:red;margin-right:5px'>*</span>" + item.text;
+
+        return item.text;
+    }
+
 </script>
+<style>
+.text_hint{
+    font-size:11px;
+    margin: -5px 0 0 500px;
+}
+@media screen and (max-width: 1366px){
+    .text_hint {
+        margin-left: 300px;
+     }
+}
+@media screen and (max-width: 1024px){
+    .text_hint {
+        margin-left: 200px;
+    }
+}
+@media screen and (max-width: 768px){
+    .text_hint {
+        margin-left: 100px;
+    }
+}
+@media screen and (max-width: 600px){
+    .text_hint {
+        margin-left: 50px;
+    }
+}
+</style>
+
 <?php PrepareEditorScript(true, $this); ?>
 
 <script type='text/javascript'><?php echo $qTypeOutput; ?></script>
@@ -136,7 +213,9 @@ if ($adding || $copying) {
                                     {
                                         $groups[$questionType['group']] = array();
                                     }
-                                    $groups[$questionType['group']][$key] = $questionType['description'];
+                                    $description = $questionType['description'];
+                                    //if(isQuestionTypeSupported($key)) { $description = "<span style=\"color:red; display: inline\">*</span> " . $description; }
+                                    $groups[$questionType['group']][$key] = $description;
                                 }
                                 $this->widget('ext.bootstrap.widgets.TbSelect2', array(
                                     'data' => $groups,
@@ -155,6 +234,8 @@ if ($adding || $copying) {
                                 ));
                                 $script = '$("#question_type option").addClass("questionType");';
                                 App()->getClientScript()->registerScript('add_class_to_options', $script);
+                                $script = "jQuery('#question_type').select2({'width':'300px', 'minimumResultsForSearch':'1000', 'formatResult': formatResult });";
+                                App()->getClientScript()->registerScript('do_some_stuff', $script);
                             }
                             else
                             {
@@ -174,7 +255,7 @@ if ($adding || $copying) {
                             echo "{$qtypelist[$eqrow['type']]['description']} - ".$clang->gT("Cannot be changed (survey is active)"); ?>
                             <input type='hidden' name='type' id='question_type' value='<?php echo $eqrow['type']; ?>' />
                         <?php } ?>
-
+                        <div class="text_hint">Question types marked with <span style="color:red">*</span> can be used in conditions to assign new interventions or arms</div>
                 </li>
 
 
