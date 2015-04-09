@@ -12,6 +12,7 @@ function isQuestionTypeSupported($questionType) {
         case 'S': //Short free text
         case 'Y': //Single choice
         case 'D': //Date
+        case '*': //Equation
             return true;
         default:
             return false;
@@ -45,6 +46,7 @@ if ($adding || $copying) {
             case 'S': //Short free text
             case 'Y': //Single choice
             case 'D': //Date
+            case '*': //Equation
                 return true;
             default:
                 return false;
