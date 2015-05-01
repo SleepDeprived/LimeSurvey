@@ -18,6 +18,13 @@
             App()->getClientScript()->registerCssFile(Yii::app()->getConfig('adminstyleurl') .  "displayParticipants.css");
 
         ?>
+        <link href='https://d2dm2vev0ju42o.cloudfront.net/f/proximanova-black.otf' type='text/css'>
+        <link href='https://d2dm2vev0ju42o.cloudfront.net/f/proximanova-bold.otf' type='text/css'>
+        <link href='https://d2dm2vev0ju42o.cloudfront.net/f/proximanova-extrabld.otf' type='text/css'>
+        <link href='https://d2dm2vev0ju42o.cloudfront.net/f/proximanova-light.otf' type='text/css'>
+        <link href='https://d2dm2vev0ju42o.cloudfront.net/f/proximanova-medium.otf' type='text/css'>
+        <link href='https://d2dm2vev0ju42o.cloudfront.net/f/proximanova-regular.otf' type='text/css'>
+        <link href='https://d2dm2vev0ju42o.cloudfront.net/f/proximanova-semibold.otf' type='text/css'>
         <link rel="shortcut icon" href="<?php echo App()->baseUrl; ?>styles/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="<?php echo App()->baseUrl; ?>styles/favicon.ico" type="image/x-icon" />
         <?php $this->widget('ext.LimeScript.LimeScript'); ?>

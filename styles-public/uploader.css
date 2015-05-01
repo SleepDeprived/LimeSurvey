@@ -1,4 +1,4 @@
-body {font-family: verdana, arial, helvetica, sans-serif;font-size: 12px;color: black; direction: ltr;}
+body {font-family: 'Proxima Nova', verdana, arial, helvetica, sans-serif;font-size: 12px;color: black; direction: ltr;}
 h1 {color: #C7D92C;	font-size: 18px; font-weight: 400;}
 a {color: white;}
 a:hover, a.hover {color: #C7D92C;}
@@ -36,7 +36,7 @@ img {
     font-weight: bold;
     outline: medium none;
     -moz-border-radius: 5px 5px 5px 5px;
-    font-family: Verdana,Arial,sans-serif;
+    font-family: 'Proxima Nova', Verdana,Arial,sans-serif;
     font-size: 1em;
     float: none;
     line-height: 1.4em;

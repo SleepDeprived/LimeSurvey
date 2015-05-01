@@ -58,13 +58,13 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-  font-family: Verdana, Arial, sans-serif;
+  font-family: 'Proxima Nova', Verdana, Arial, sans-serif;
   font-size: 10pt;
 }
 
 .ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button
   {
-  font-family: Verdana, Arial, sans-serif;
+  font-family: 'Proxima Nova', Verdana, Arial, sans-serif;
   font-size: 0.9em;
 }
 

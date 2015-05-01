@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    font-family: verdana, arial, sans-serif;
+    font-family: 'Proxima Nova', arial, sans-serif;
     text-align: left;
     background-color: #ffffff;
     color: #666;
@@ -332,7 +332,7 @@ input[disabled], textarea[disabled], select[disabled], button[disabled] {
 textarea {
     font-size: 10px;
     color: #000;
-    font-family: verdana, arial, sans-serif;
+    font-family: 'Proxima Nova', arial, sans-serif;
 }
 
 .markedrow

@@ -25,11 +25,11 @@ h1,h2,h3,h4,h5,h6 {
   padding:0;
   font-size:100%;
   font-weight:400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 select {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color: #6f6f6f;
 }
 
@@ -49,7 +49,7 @@ body {
   font-size:14px;
   font-style: normal;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 ul {
@@ -94,7 +94,7 @@ text-decoration: none;
 }
 
 textarea {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #6f6f6f;
@@ -147,7 +147,7 @@ table.register,
 body {
     background: url("images/bg.jpg") repeat-x scroll 0 0 #396276;
     color: #515151;
-    font-family: 'Roboto';
+    font-family: 'Proxima Nova';
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -305,7 +305,7 @@ header .site_logo {
 
 #surveylist {}
 #surveylist h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color:#328639;
 }
 .surveylistheading {
@@ -443,7 +443,7 @@ header .site_logo {
 }
 .success {
   color: #4a4a4a;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -559,7 +559,7 @@ table.register td input.text { /* input form fields */
 #statsContainer .statsSurveyTitle {
   padding: 0;
 	color: #4a4a4a;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
@@ -608,7 +608,7 @@ table.statisticstable td {
 table.statisticstable th {
 	text-align: center;
 	padding: 10px 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 15px;
@@ -625,7 +625,7 @@ table.statisticssummary {
 }
 
 table.statisticssummary thead tr th {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #bc3d34;
 	font-style: normal;
 	font-weight: 700;
@@ -651,7 +651,7 @@ table.statisticssummary tbody tr th {
 }
 #group-wrapper h3.groupname {
   color: #4a4a4a;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -689,7 +689,7 @@ table.statisticssummary tbody tr th {
 
 /* Main questiontext box */
 div.questiontext {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color: #bc3d34;
   font-style: normal;
   font-weight: 700;
@@ -822,7 +822,7 @@ background: -ms-linear-gradient(top, #97c42c 0%,#7fa71f 100%);
 background: linear-gradient(to bottom, #97c42c 0%,#7fa71f 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97c42c', endColorstr='#7fa71f',GradientType=0 );
 display: inline-block;
-font-family: 'Roboto', 'sans-serif';
+font-family: 'Proxima Nova', 'sans-serif';
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -881,7 +881,7 @@ background-size: 9px 13px;
 padding: 0;
 padding-right: 25px;
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -929,7 +929,7 @@ background-size: 9px 13px;
 padding: 0;
 padding-left: 25px;
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -952,7 +952,7 @@ background: -ms-linear-gradient(top, #9ec5d3 0%,#769ead 100%);
 background: linear-gradient(to bottom, #9ec5d3 0%,#769ead 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ec5d3', endColorstr='#769ead',GradientType=0 );
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -987,7 +987,7 @@ background: -ms-linear-gradient(top, #7c7e7d 0%,#5c5d5f 100%);
 background: linear-gradient(to bottom, #7c7e7d 0%,#5c5d5f 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c7e7d', endColorstr='#5c5d5f',GradientType=0 );
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -1114,7 +1114,7 @@ select.languagechanger {}
 .printouttitle { /* see h1 */
   display:block;
 	color: #4a4a4a;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
@@ -1137,7 +1137,7 @@ select.languagechanger {}
 }
 
 tr.printanswersgroup {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #bc3d34;
 	font-style: normal;
 	font-weight: 700;
@@ -1151,7 +1151,7 @@ tr.printanswersgroup td {
 }
 
 tr.printanswersquestionhead {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #4a4a4a;
 	font-style: normal;
 	font-weight: 700;
@@ -1221,7 +1221,7 @@ p#tokenmessage {
 span.asterisk { /* Asterisk when question mandatory */
   color:#ff0f0f;
   font-size:80%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   letter-spacing:2px;
 }
 
@@ -1282,7 +1282,7 @@ input.text,
   .numeric-multi li.multiplenumerichelp input.problem,
   .numeric-multi .answer ul li span.input input {
 	height: 29px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #6f6f6f;
@@ -1521,7 +1521,7 @@ table.question tbody td label input.radio {}
   padding-left: 10px;
   padding-right: 10px;
   width: 94px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #6f6f6f;
@@ -1568,7 +1568,7 @@ table.question tbody td label input.radio {}
   padding-left: 10px;
   padding-right: 10px;
   width: 94px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #6f6f6f;
@@ -1926,7 +1926,7 @@ ul.last {}
   float:left;
   width:50px;
   margin:15px 0 0 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-size:80%;
   font-weight:400;
   text-align:left;
