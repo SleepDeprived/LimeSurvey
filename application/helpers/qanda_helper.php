@@ -1316,7 +1316,7 @@ function do_date($ia)
                         for(var i = thisYear-100; i <=thisYear; i++){
                             year.push('<option value='+i+'>'+i+'</option>');
                         }
-                        $('p.{$ia[1]}').find('#span-year').children('select').append(year);
+                        $('p.{$ia[1]}').find('#span-year').children('select').append(year.reverse());
                     </script>
                 </select>
             </span>

@@ -640,7 +640,7 @@ table.statisticssummary tbody tr th {
 /*----------------------------------------------------------------------------*/
 /* START: Group / Question parts */
 #group-wrapper {
-  margin: 0;
+  margin: 0 auto;
   padding: 15px;
   width: 100%;
   -webkit-box-sizing: border-box;
