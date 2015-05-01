@@ -1,4 +1,4 @@
-                                                                @import url("template_full.css") screen and (min-width:999px);                
+                                                                @import url("template_full.css") screen and (min-width:999px);
 @import url("template_mobile.css") screen and (max-width:998px);
 @media screen and (max-width:998px) {
 	#panel_left {
@@ -35,7 +35,7 @@
 
 div.notification {
   width: 90%;
-  background-color: #B73B32;
+  background-color: #c25027;
   color: #ffffff;
   font-weight: 900;
   padding: 2%;
@@ -43,4 +43,4 @@ div.notification {
   margin: auto;
   margin-top:5%;
   text-align: center;
-}                                                            
+}

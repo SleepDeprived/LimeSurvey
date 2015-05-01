@@ -9,7 +9,7 @@ table {
   border-collapse:collapse;
   border-spacing:0;
 }
-fieldset,img,abbr,acronym { 
+fieldset,img,abbr,acronym {
   border:0;
 }
 ol,ul {
@@ -222,16 +222,16 @@ header .site_logo {
   width: 220px;
   background: url(alt3.png) repeat-y 100% 0px;
   overflow: hidden;
-  border-top: 4px solid #B73B32;
+  border-top: 4px solid #c25027;
 }
 
 #panel_left #content {
   color: #7e7e7e;
-  font-size: 13px; 
+  font-size: 13px;
 }
 
 #panel_left #content p {
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 #panel_left #about {
@@ -244,7 +244,7 @@ header .site_logo {
   padding-left: 22px;
   margin: -25px 0px 25px -24px;
   width: 242px;
-  
+
   font-weight: 700;
   font-style: normal;
 }
@@ -257,7 +257,7 @@ header .site_logo {
   width: 100%;
   max-width: 738px;
   background-color:#fff;
-  border-top: 4px solid #B73B32;
+  border-top: 4px solid #c25027;
 }
 #footer-wrapper {
   clear: both;
@@ -411,7 +411,7 @@ header .site_logo {
   margin:20px 12% 0;
   background-color:#fff;
 }
-.assessmentheading {  
+.assessmentheading {
   font-weight:700;
   background-color:#ccc;
   padding:3px;
@@ -677,7 +677,7 @@ table.statisticssummary tbody tr th {
   padding: 20px 20px 0px 20px;
   width: 632px;
   width: 100%;
-  max-width: 632px;   
+  max-width: 632px;
 }
 
 
@@ -908,7 +908,7 @@ background: -o-linear-gradient(top, #f5f5f5 0%,#e1e1e1 100%);
 background: -ms-linear-gradient(top, #f5f5f5 0%,#e1e1e1 100%);
 background: linear-gradient(to bottom, #f5f5f5 0%,#e1e1e1 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e1e1e1',GradientType=0 );
-padding: 0 25px;	
+padding: 0 25px;
 }
 
 #moveprevbtn:hover {
@@ -933,7 +933,7 @@ font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
-text-transform: uppercase;	
+text-transform: uppercase;
 }
 
 /* Save All button */
@@ -991,7 +991,7 @@ font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
-text-transform: uppercase;	
+text-transform: uppercase;
 }
 
 .clearall:hover {
@@ -1072,13 +1072,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', end
 }
 #progress-pre {}
 #progressbar.ui-progressbar.ui-widget.ui-widget-content.ui-corner-all {
-  
+
   background: #658716;
   border: 1px solid #4f6a11;
   border-radius:8px;
   width: 250px;
   height: 10px;
-  
+
   -moz-box-shadow:    inset  0 1px 5px #4f6a11;
   -webkit-box-shadow: inset  0 1px 5px #4f6a11;
   box-shadow:         inset 0 1px 5px #4f6a11;
@@ -1089,7 +1089,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', end
   border: 1px solid #666;
   border-radius: 8px;
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#edf3f4));
-  background: -webkit-linear-gradient(top, #FFFFFF, #edf3f4); 
+  background: -webkit-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -moz-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -ms-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -o-linear-gradient(top, #FFFFFF, #edf3f4);
@@ -1467,7 +1467,7 @@ table.question tbody td label input.radio {}
 .array-flexible-duel-scale tbody td.ddarrayseparator {
   background-color:#fff;
   margin:0;
-  padding:0;    
+  padding:0;
 }
 
 .array-flexible-duel-scale tbody td.ddprefix {
@@ -1582,19 +1582,19 @@ table.question tbody td label input.radio {}
 }
 
 .numeric-multi .answer ul li span.input input:focus {background: #FFF;}
-    
+
   .numeric-multi .answer li span.input,
   .numeric-multi .answer li.multiplenumerichelp span {
   text-align:left;
 }
-  
-  
+
+
 .numeric-multi .answer ul li label.slider-label {
   font-size:100%;
   vertical-align:middle;
   padding:0 15px 0 0;
 }
-.numeric-multi .answer ul li div.slider_lefttext { /* text on the left side of slider bar */ 
+.numeric-multi .answer ul li div.slider_lefttext { /* text on the left side of slider bar */
   padding:0 15px 0 0;
   text-align:right;
   vertical-align:middle;
@@ -1659,7 +1659,7 @@ table.question tbody td label input.radio {}
   background: #f0f0f0;
   border: 1px solid #6f6f6f;
   margin-bottom: 3px;
-  cursor: move; 
+  cursor: move;
 }
 
 .dragDropTable .columns2 strong.SortableTitle {
@@ -1679,7 +1679,7 @@ table.question tbody td label input.radio {}
   background: #ddd;
   border: 1px solid #6f6f6f;
   margin-bottom: 3px;
-  cursor: move; 
+  cursor: move;
 }
 
 
@@ -1744,7 +1744,7 @@ table.question tbody td label input.radio {}
 /* 5 point choice question */
 .choice-5-pt-radio {}
 .choice-5-pt-radio .answer ul li input.radio {}
-.choice-5-pt-radio .answer ul li label.answertext {} 
+.choice-5-pt-radio .answer ul li label.answertext {}
 
 
 
@@ -2132,10 +2132,10 @@ p.problem
 
 /* START: Clearfix */
 .clearfix:after {
-  content:"."; 
-  display:block; 
-  height:0; 
-  clear:both; 
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
   visibility:hidden;
 }
 .clearfix {display:inline-block;}
@@ -2143,4 +2143,4 @@ p.problem
 * html .clearfix {height:1%;}
 .clearfix {display:block;}
 /* End hide from IE-mac */
-/* END: Clearfix */                                                                                                                                              
+/* END: Clearfix */
