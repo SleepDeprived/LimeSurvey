@@ -449,7 +449,7 @@ tr.even, .evenrow
     background-color: #fff;
 }
 tr.odd,.oddrow,.answertable tr.highlight {
-    background-color: #EFFBDB;
+    background-color: #deddd4;
 }
 
 tr.editedrow{
@@ -735,7 +735,7 @@ ul.assessmentscope li label:first-child {
 
 .browsetable tfoot td {
     text-align: left;
-    background-color: #EFFBDB;
+    background-color: #deddd4;
     padding:4px;
 }
 
@@ -998,7 +998,7 @@ table.statisticstable, table.statisticssummary {
 .statisticsbrowsecolumn {
     text-align: left;
     width: 100%;
-    background-color: #EFFBDB;
+    background-color: #deddd4;
 }
 .statisticscolumnid {
     float: left;
@@ -1044,7 +1044,7 @@ div.uploadsummary li {
 div.warningheader, div.messagebox .warningheader{
     font-weight:bold;
     color:#85BD00;
-    background-color: #EFFBDB;
+    background-color: #deddd4;
     margin: 5px 0;
     padding:2px;
 }
@@ -1145,7 +1145,7 @@ div.partialheader{
 .data-entry-tbl .data-entry-separator td {
     padding: 0;
     height: 2px;
-    background-color: #EFFBDB;
+    background-color: #deddd4;
 }
 
 .data-entry-explanation {
@@ -1852,3 +1852,25 @@ td.LEMerror  {
 	margin: 0 0.5em;
 }
 
+.limebutton {
+    border: 1px solid #c25027 !important;
+    background: #d7953d !important;
+    background: -moz-linear-gradient(top, #d7953d 0%, #c25027 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d7953d), color-stop(100%,#c25027)) !important;
+    background: -webkit-linear-gradient(top, #d7953d 0%,#c25027 100%) !important;
+    background: -o-linear-gradient(top, #d7953d 0%,#c25027 100%) !important;
+    background: -ms-linear-gradient(top, #d7953d 0%,#c25027 100%) !important;
+    background: linear-gradient(to bottom, #d7953d 0%,#c25027 100%) !important;
+}
+
+.limebutton:hover {
+    border-color: #c25027 !important;
+    background: #fcc96e !important;
+    background: -moz-linear-gradient(top, #fcc96e 0%, #c25027 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcc96e), color-stop(100%,#c25027)) !important;
+    background: -webkit-linear-gradient(top, #fcc96e 0%,#c25027 100%) !important;
+    background: -o-linear-gradient(top, #fcc96e 0%,#c25027 100%) !important;
+    background: -ms-linear-gradient(top, #fcc96e 0%,#c25027 100%) !important;
+    background: linear-gradient(to bottom, #fcc96e 0%,#c25027 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcc96e', endColorstr='#c25027',GradientType=0 ) !important;
+}
