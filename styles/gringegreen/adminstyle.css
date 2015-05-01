@@ -9,7 +9,7 @@ html, body {
 body {
     font-family: verdana, arial, sans-serif;
     text-align: left;
-    background-color: #fefefe;
+    background-color: #ffffff;
     color: #666;
     margin: 0;
     font-size: 9pt;
@@ -45,7 +45,7 @@ hr{
     height: 100%;
     margin: 0 auto -40px;
     */
-    background-color:#fefefe;
+    background-color:#ffffff;
     width:100%;
 }
 
@@ -124,7 +124,7 @@ span.basic {
 
 /* Start menubar */
 div.menubar {
-    background-color: #fefefe;
+    background-color: #ffffff;
     clear:left;
     padding:0;
     margin:0 auto !important;
@@ -1014,7 +1014,7 @@ table.statisticstable, table.statisticssummary {
 div.messagebox {
     width: 550px;
     margin:10px auto;
-    background-color: #EFFBDB;
+    background-color: #ffffff;
     text-align: center;
     padding:10px;
 }
@@ -1838,7 +1838,7 @@ td.LEMerror  {
     top: 0.7em;
 }
 .ui-pager-control,.ui-search-toolbar > th.ui-th-column{
-    background: #F4FFDB !important;
+    background: #ffffff !important;
 }
 
 /* Edit answer and sub-question action buttons */
