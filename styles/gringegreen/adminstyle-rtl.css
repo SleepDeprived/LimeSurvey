@@ -56,13 +56,13 @@ ul,ol {
     padding-left: 10px;
 }
 
-#separator3, 
+#separator3,
 #separator12 {
     padding-right: 0;
     padding-left: 0;
 }
 
-#separator4, 
+#separator4,
 #separator16 {
     padding-left: 1px;
     padding-right: 50px;
@@ -79,7 +79,7 @@ div.menubar input {
     text-align: right;
 }
 
-.form30 li, 
+.form30 li,
 .form44 li {
     clear: right;
 }
@@ -134,7 +134,7 @@ div.menubar input {
 
 ul.sf-menu li li:hover ul,
 ul.sf-menu li li.sfHover ul {
-    right: 99%; 
+    right: 99%;
 	left:auto;
 }
 
