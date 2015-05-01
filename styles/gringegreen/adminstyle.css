@@ -80,7 +80,9 @@ a:hover {
 }
 
 th, p, div {
-    font-size: 10pt;
+    font-size: 12pt;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 fieldset {
@@ -160,7 +162,7 @@ div.menubar .ui-widget-header
     font-size: 11px;
     text-align: left;
     border-color: #efefef;
-    background-color:#EFFBDB;
+    /*background-color:#EFFBDB;*/
     padding:0 0.2%;
     min-height:14px;
 }
@@ -492,7 +494,7 @@ th.admincell {
 }
 .statisticsfilters {
     width: 99%;
-    border: 1px solid #85BD00;
+    border: 1px solid #d7953d;
     margin-bottom: 20px;
 }
 .scrollheight_400 {
@@ -1026,7 +1028,7 @@ div.messagebox .header{
 div.successheader{
     font-weight:bold;
     color:#fff;
-    background-color: #85BD00;
+    background-color: #d7953d;
     margin: 5px 0;
     padding:2px;
 }
@@ -1043,7 +1045,7 @@ div.uploadsummary li {
 }
 div.warningheader, div.messagebox .warningheader{
     font-weight:bold;
-    color:#85BD00;
+    color:#d7953d;
     background-color: #deddd4;
     margin: 5px 0;
     padding:2px;
@@ -1382,7 +1384,7 @@ div.right {
 }
 
 .statistics-tbl-separator td {
-    background-color:#EFFBDB;
+    /*background-color:#EFFBDB;*/
     height:2px;
     padding:0;
 }
@@ -1417,7 +1419,7 @@ div.right {
 
 /* Statistics filter */
 .filtertable  {
-    background:#EFFBDB;
+    /*background:#EFFBDB;*/
     text-align:center;
     margin:5px auto;
     border:1px #fff solid;
@@ -1590,7 +1592,8 @@ ol.organizer {
 
 
 .organizer li div  {
-    background: none repeat scroll 0 0 #85BD00;
+    border: 1px solid #d7953d;
+    background: none repeat scroll 0 0 #ffffff;
     color:#fff;
     padding: 3px;
     margin: 0;
@@ -1601,7 +1604,7 @@ ol.organizer {
 }
 
 .organizer li ol li div{
-    background-color:#EFFBDB;
+    /*background-color:#EFFBDB;*/
     color:#666;
 }
 
@@ -1782,7 +1785,7 @@ tr.LEMgroup td {
 }
 
 tr.LEMquestion {
-	background-color: #EAF2D3;
+	/*background-color: #ffffff;*/
 }
 
 tr.LEManswer td {

@@ -1161,7 +1161,7 @@ class ExpressionManager {
         }
         return array_unique($jsNames);
     }
-    
+
     /**
      * Return the list of all of the JavaScript variables used by the most recent expression
      * @return <type>
@@ -1642,7 +1642,7 @@ class ExpressionManager {
                 ++$errIndex;
             }
         }
-        return "<span style='background-color: #eee8aa;'>" . implode('', $stringParts) . "</span>";
+        return "<span style='background-color: #ffffff;'>" . implode('', $stringParts) . "</span>";
     }
 
     /**
@@ -2156,10 +2156,10 @@ class ExpressionManager {
      */
     public function asSplitStringOnExpressions($src)
     {
-         
+
         $parts = preg_split($this->RDP_ExpressionRegex,$src,-1,(PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE));
-        
-        
+
+
         $count = count($parts);
         $tokens = array();
         $inSQString=false;
@@ -2378,7 +2378,7 @@ class ExpressionManager {
 
     /**
     * Public call of RDP_Tokenize
-    * 
+    *
     * @param string $sSource : the string to tokenize
     * @param bool $bOnEdit : on edition, actually don't remove space
     * @return array
