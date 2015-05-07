@@ -75,6 +75,7 @@ function loadanswers()
             }
             elseif ($column =='lastpage' && isset($_GET['token']))
             {
+                $value++;
                 if(is_null($submitdate) || $submitdate=="N")
                 {
                     $_SESSION['survey_'.$surveyid]['step']=($value>1? $value:1) ;
