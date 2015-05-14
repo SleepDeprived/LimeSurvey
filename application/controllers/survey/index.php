@@ -509,7 +509,7 @@ class index extends CAction {
                     if (!empty($oSurveyTokenInstance->lastpage))
                     {
                         $_SESSION['survey_'.$surveyid]['LEMtokenResume'] = true;
-                        $_SESSION['survey_'.$surveyid]['step'] = $oSurveyTokenInstance->lastpage;
+                        $_SESSION['survey_'.$surveyid]['step'] = $oSurveyTokenInstance->lastpage + 1;
                     }
                 }
                 buildsurveysession($surveyid);
