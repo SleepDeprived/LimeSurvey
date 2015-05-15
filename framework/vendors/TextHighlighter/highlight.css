@@ -46,7 +46,7 @@
     color: Blue;
 }
 .php-hl-main {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Proxima Nova', 'Courier New', Courier, monospace;
 	font-weight: normal;
     font-size: 12px;
 }
@@ -111,7 +111,7 @@ ol.php-hl-main pre {
     color: Blue;
 }
 .xml-hl-main {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Proxima Nova', 'Courier New', Courier, monospace;
 	font-weight: normal;
 }
 .xml-hl-gutter {
@@ -171,7 +171,7 @@ ol.php-hl-main pre {
     color: Blue;
 }
 .html-hl-main {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Proxima Nova', 'Courier New', Courier, monospace;
 	font-weight: normal;
 }
 .html-hl-gutter {
@@ -231,7 +231,7 @@ ol.php-hl-main pre {
     color: Blue;
 }
 .css-hl-main {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Proxima Nova', 'Courier New', Courier, monospace;
 	font-weight: normal;
 }
 .css-hl-gutter {
@@ -291,7 +291,7 @@ ol.php-hl-main pre {
     color: Blue;
 }
 .javascript-hl-main {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Proxima Nova', 'Courier New', Courier, monospace;
 	font-weight: normal;
 }
 .javascript-hl-gutter {
@@ -352,7 +352,7 @@ ol.php-hl-main pre {
     color: Blue;
 }
 .sql-hl-main {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Proxima Nova', 'Courier New', Courier, monospace;
 	font-weight: normal;
 }
 .sql-hl-gutter {

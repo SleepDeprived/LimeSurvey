@@ -1,10 +1,10 @@
 body {
-  font-family:arial,helvetica,sans-serif;
+  font-family:'Proxima Nova',arial,helvetica,sans-serif;
   font-size:12px;
 }
 
 h1,h2,h3,h4 {
-  font-family:verdana,arial,helvetica,sans-serif;
+  font-family:'Proxima Nova',verdana,arial,helvetica,sans-serif;
 }
 h2 {
   margin-top:2em;
@@ -62,7 +62,7 @@ div.boilerplate,div.choice-5-pt-radio,div.date,div.list-radio-flexible,div.list-
 }
 
 .other {
-  
+
 }
 
 .question ul,.question ul li {

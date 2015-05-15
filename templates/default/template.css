@@ -57,7 +57,7 @@ button.ui-button::-moz-focus-inner { /* Get rid of extra padding in focused butt
 	position: relative;
 	padding: 0.1em 0 0.2em 0;
 	cursor: pointer;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: 'Proxima Nova', Geneva, sans-serif;
 	font-size: 1.0em;
 	font-weight: normal;
 	line-height: normal;
@@ -103,12 +103,12 @@ button.ui-button-icons-only {
 
 .ui-button-text-icon-primary .ui-button-text {
 	padding: 0 0.7em 0 1.7em;
-	*padding: 0 20px; 
+	*padding: 0 20px;
 }
 
 .ui-button-text-icon-secondary .ui-button-text {
 	padding: 0 1.7em 0 0.7em;
-	*padding: 0 20px; 
+	*padding: 0 20px;
 }
 
 .ui-button-text-icons .ui-button-text {
@@ -205,7 +205,7 @@ body.default {
   background-color: #FFF;
   font-size: 13px;
   line-height: 120%;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   color: #1d2d45;
 }
 
@@ -253,14 +253,14 @@ a {
 }
 
 .array1 {
-  font-family: verdana;
+  font-family: 'Proxima Nova';
   font-size: 11px;
   text-align: center;
   background-color: #fff;
 }
 
 .array2 {
-  font-family: verdana;
+  font-family: 'Proxima Nova';
   font-size: 11px;
   text-align: center;
   background-color: #eee;
@@ -292,7 +292,7 @@ button.submit {
 .asterisk {
   color: red;
   font-size: 9px;
-  font-family: verdana;
+  font-family: 'Proxima Nova';
   padding-right:1em;
 }
 
@@ -374,7 +374,7 @@ span.qnumcode {
 }
 
 td.questiontext {
-  font-family: verdana;
+  font-family: 'Proxima Nova';
   font-size: 12px;
   font-weight: bold;
   background-color: #EEF6FF;
@@ -555,13 +555,13 @@ table.group {
 
 .group-name {
 	font-size: small;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family:'Proxima Nova', Arial, Helvetica, sans-serif;
 	font-weight: bold;
 }
 
 .group-description {
 	font-size: small;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family:'Proxima Nova', Arial, Helvetica, sans-serif;
 }
 
 .question-wrapper {
@@ -1209,7 +1209,7 @@ ul.cols-8 li,ul.cols-8-ul,table.cols-8 td {
   float: left;
   width: 50px;
   margin: 15px 0 0 -0.3em;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   font-size: 0.7em;
   font-weight: normal;
   text-align: left;
@@ -1219,7 +1219,7 @@ ul.cols-8 li,ul.cols-8-ul,table.cols-8 td {
   float: right;
   width: 50px;
   margin: 15px -0.3em 0 0;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   font-size: 0.7em;
   font-weight: normal;
   text-align: right;
@@ -1384,7 +1384,7 @@ div#wrapper {
   width: 75%;
   margin: 20px auto;
   border: 1px solid #BBC6CC;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 120%;
 }

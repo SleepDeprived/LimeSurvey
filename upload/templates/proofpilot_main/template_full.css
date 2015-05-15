@@ -9,7 +9,7 @@ table {
   border-collapse:collapse;
   border-spacing:0;
 }
-fieldset,img,abbr,acronym { 
+fieldset,img,abbr,acronym {
   border:0;
 }
 ol,ul {
@@ -25,11 +25,11 @@ h1,h2,h3,h4,h5,h6 {
   padding:0;
   font-size:100%;
   font-weight:400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 select {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color: #6f6f6f;
 }
 
@@ -49,7 +49,7 @@ body {
   font-size:14px;
   font-style: normal;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 ul {
@@ -94,7 +94,7 @@ text-decoration: none;
 }
 
 textarea {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #6f6f6f;
@@ -147,7 +147,7 @@ table.register,
 body {
     background: url("images/bg.jpg") repeat-x scroll 0 0 #396276;
     color: #515151;
-    font-family: 'Roboto';
+    font-family: 'Proxima Nova';
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -222,16 +222,16 @@ header .site_logo {
   width: 220px;
   background: url(alt3.png) repeat-y 100% 0px;
   overflow: hidden;
-  border-top: 4px solid #B73B32;
+  border-top: 4px solid #c25027;
 }
 
 #panel_left #content {
   color: #7e7e7e;
-  font-size: 13px; 
+  font-size: 13px;
 }
 
 #panel_left #content p {
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 #panel_left #about {
@@ -244,7 +244,7 @@ header .site_logo {
   padding-left: 22px;
   margin: -25px 0px 25px -24px;
   width: 242px;
-  
+
   font-weight: 700;
   font-style: normal;
 }
@@ -257,7 +257,7 @@ header .site_logo {
   width: 100%;
   max-width: 738px;
   background-color:#fff;
-  border-top: 4px solid #B73B32;
+  border-top: 4px solid #c25027;
 }
 #footer-wrapper {
   clear: both;
@@ -305,7 +305,7 @@ header .site_logo {
 
 #surveylist {}
 #surveylist h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color:#328639;
 }
 .surveylistheading {
@@ -411,7 +411,7 @@ header .site_logo {
   margin:20px 12% 0;
   background-color:#fff;
 }
-.assessmentheading {  
+.assessmentheading {
   font-weight:700;
   background-color:#ccc;
   padding:3px;
@@ -443,7 +443,7 @@ header .site_logo {
 }
 .success {
   color: #4a4a4a;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -559,7 +559,7 @@ table.register td input.text { /* input form fields */
 #statsContainer .statsSurveyTitle {
   padding: 0;
 	color: #4a4a4a;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
@@ -608,7 +608,7 @@ table.statisticstable td {
 table.statisticstable th {
 	text-align: center;
 	padding: 10px 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 15px;
@@ -625,7 +625,7 @@ table.statisticssummary {
 }
 
 table.statisticssummary thead tr th {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #bc3d34;
 	font-style: normal;
 	font-weight: 700;
@@ -651,7 +651,7 @@ table.statisticssummary tbody tr th {
 }
 #group-wrapper h3.groupname {
   color: #4a4a4a;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -677,7 +677,7 @@ table.statisticssummary tbody tr th {
   padding: 20px 20px 0px 20px;
   width: 632px;
   width: 100%;
-  max-width: 632px;   
+  max-width: 632px;
 }
 
 
@@ -689,7 +689,7 @@ table.statisticssummary tbody tr th {
 
 /* Main questiontext box */
 div.questiontext {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color: #bc3d34;
   font-style: normal;
   font-weight: 700;
@@ -822,7 +822,7 @@ background: -ms-linear-gradient(top, #97c42c 0%,#7fa71f 100%);
 background: linear-gradient(to bottom, #97c42c 0%,#7fa71f 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97c42c', endColorstr='#7fa71f',GradientType=0 );
 display: inline-block;
-font-family: 'Roboto', 'sans-serif';
+font-family: 'Proxima Nova', 'sans-serif';
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -881,7 +881,7 @@ background-size: 9px 13px;
 padding: 0;
 padding-right: 25px;
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -908,7 +908,7 @@ background: -o-linear-gradient(top, #f5f5f5 0%,#e1e1e1 100%);
 background: -ms-linear-gradient(top, #f5f5f5 0%,#e1e1e1 100%);
 background: linear-gradient(to bottom, #f5f5f5 0%,#e1e1e1 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e1e1e1',GradientType=0 );
-padding: 0 25px;	
+padding: 0 25px;
 }
 
 #moveprevbtn:hover {
@@ -929,11 +929,11 @@ background-size: 9px 13px;
 padding: 0;
 padding-left: 25px;
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
-text-transform: uppercase;	
+text-transform: uppercase;
 }
 
 /* Save All button */
@@ -952,7 +952,7 @@ background: -ms-linear-gradient(top, #9ec5d3 0%,#769ead 100%);
 background: linear-gradient(to bottom, #9ec5d3 0%,#769ead 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ec5d3', endColorstr='#769ead',GradientType=0 );
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -987,11 +987,11 @@ background: -ms-linear-gradient(top, #7c7e7d 0%,#5c5d5f 100%);
 background: linear-gradient(to bottom, #7c7e7d 0%,#5c5d5f 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c7e7d', endColorstr='#5c5d5f',GradientType=0 );
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
-text-transform: uppercase;	
+text-transform: uppercase;
 }
 
 .clearall:hover {
@@ -1072,13 +1072,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', end
 }
 #progress-pre {}
 #progressbar.ui-progressbar.ui-widget.ui-widget-content.ui-corner-all {
-  
+
   background: #658716;
   border: 1px solid #4f6a11;
   border-radius:8px;
   width: 250px;
   height: 10px;
-  
+
   -moz-box-shadow:    inset  0 1px 5px #4f6a11;
   -webkit-box-shadow: inset  0 1px 5px #4f6a11;
   box-shadow:         inset 0 1px 5px #4f6a11;
@@ -1089,7 +1089,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', end
   border: 1px solid #666;
   border-radius: 8px;
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#edf3f4));
-  background: -webkit-linear-gradient(top, #FFFFFF, #edf3f4); 
+  background: -webkit-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -moz-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -ms-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -o-linear-gradient(top, #FFFFFF, #edf3f4);
@@ -1114,7 +1114,7 @@ select.languagechanger {}
 .printouttitle { /* see h1 */
   display:block;
 	color: #4a4a4a;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
@@ -1137,7 +1137,7 @@ select.languagechanger {}
 }
 
 tr.printanswersgroup {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #bc3d34;
 	font-style: normal;
 	font-weight: 700;
@@ -1151,7 +1151,7 @@ tr.printanswersgroup td {
 }
 
 tr.printanswersquestionhead {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #4a4a4a;
 	font-style: normal;
 	font-weight: 700;
@@ -1221,7 +1221,7 @@ p#tokenmessage {
 span.asterisk { /* Asterisk when question mandatory */
   color:#ff0f0f;
   font-size:80%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   letter-spacing:2px;
 }
 
@@ -1282,7 +1282,7 @@ input.text,
   .numeric-multi li.multiplenumerichelp input.problem,
   .numeric-multi .answer ul li span.input input {
 	height: 29px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #6f6f6f;
@@ -1467,7 +1467,7 @@ table.question tbody td label input.radio {}
 .array-flexible-duel-scale tbody td.ddarrayseparator {
   background-color:#fff;
   margin:0;
-  padding:0;    
+  padding:0;
 }
 
 .array-flexible-duel-scale tbody td.ddprefix {
@@ -1521,7 +1521,7 @@ table.question tbody td label input.radio {}
   padding-left: 10px;
   padding-right: 10px;
   width: 94px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #6f6f6f;
@@ -1568,7 +1568,7 @@ table.question tbody td label input.radio {}
   padding-left: 10px;
   padding-right: 10px;
   width: 94px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #6f6f6f;
@@ -1582,19 +1582,19 @@ table.question tbody td label input.radio {}
 }
 
 .numeric-multi .answer ul li span.input input:focus {background: #FFF;}
-    
+
   .numeric-multi .answer li span.input,
   .numeric-multi .answer li.multiplenumerichelp span {
   text-align:left;
 }
-  
-  
+
+
 .numeric-multi .answer ul li label.slider-label {
   font-size:100%;
   vertical-align:middle;
   padding:0 15px 0 0;
 }
-.numeric-multi .answer ul li div.slider_lefttext { /* text on the left side of slider bar */ 
+.numeric-multi .answer ul li div.slider_lefttext { /* text on the left side of slider bar */
   padding:0 15px 0 0;
   text-align:right;
   vertical-align:middle;
@@ -1659,7 +1659,7 @@ table.question tbody td label input.radio {}
   background: #f0f0f0;
   border: 1px solid #6f6f6f;
   margin-bottom: 3px;
-  cursor: move; 
+  cursor: move;
 }
 
 .dragDropTable .columns2 strong.SortableTitle {
@@ -1679,7 +1679,7 @@ table.question tbody td label input.radio {}
   background: #ddd;
   border: 1px solid #6f6f6f;
   margin-bottom: 3px;
-  cursor: move; 
+  cursor: move;
 }
 
 
@@ -1744,7 +1744,7 @@ table.question tbody td label input.radio {}
 /* 5 point choice question */
 .choice-5-pt-radio {}
 .choice-5-pt-radio .answer ul li input.radio {}
-.choice-5-pt-radio .answer ul li label.answertext {} 
+.choice-5-pt-radio .answer ul li label.answertext {}
 
 
 
@@ -1926,7 +1926,7 @@ ul.last {}
   float:left;
   width:50px;
   margin:15px 0 0 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-size:80%;
   font-weight:400;
   text-align:left;
@@ -2132,10 +2132,10 @@ p.problem
 
 /* START: Clearfix */
 .clearfix:after {
-  content:"."; 
-  display:block; 
-  height:0; 
-  clear:both; 
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
   visibility:hidden;
 }
 .clearfix {display:inline-block;}
@@ -2143,4 +2143,4 @@ p.problem
 * html .clearfix {height:1%;}
 .clearfix {display:block;}
 /* End hide from IE-mac */
-/* END: Clearfix */                                                                                                                                              
+/* END: Clearfix */

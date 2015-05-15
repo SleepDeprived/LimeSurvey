@@ -9,7 +9,7 @@ table {
   border-collapse:collapse;
   border-spacing:0;
 }
-fieldset,img,abbr,acronym { 
+fieldset,img,abbr,acronym {
   border:0;
 }
 ol,ul {
@@ -25,11 +25,11 @@ h1,h2,h3,h4,h5,h6 {
   padding:0;
   font-size:100%;
   font-weight:400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 select {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color: #6f6f6f;
 }
 
@@ -48,7 +48,7 @@ body {
   font-size:15px;
   font-style: normal;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 ul {
@@ -97,7 +97,7 @@ text-decoration: none;
 textarea {
   padding-left: 10px;
   padding-right: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #6f6f6f;
@@ -116,7 +116,7 @@ textarea {
 body {
     background: url("images/bg.jpg") repeat-x scroll 0 0 #396276;
     color: #515151;
-    font-family: 'Roboto';
+    font-family: 'Proxima Nova';
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -279,7 +279,7 @@ table.register,
 
 #surveylist {}
 #surveylist h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color:#328639;
 }
 .surveylistheading {
@@ -328,7 +328,7 @@ table.register,
   margin: 0px 0px 25px 0px;
   width: 100%;
   font-weight: 700;
-  font-style: normal;	
+  font-style: normal;
 }
 
 
@@ -341,7 +341,7 @@ table.register,
 }
 
 #surveyinfo #content p {
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .surveydescription {
@@ -398,7 +398,7 @@ table.register,
   margin:20px 12% 0;
   background-color:#fff;
 }
-.assessmentheading {  
+.assessmentheading {
   font-weight:700;
   background-color:#ccc;
   padding:3px;
@@ -433,7 +433,7 @@ table.register,
   margin: 0px 0px 25px 0px;
   width: 100%;
   font-weight: 700;
-  font-style: normal;	
+  font-style: normal;
 }
 
 
@@ -446,17 +446,17 @@ table.register,
 }
 
 #completed #content p {
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .success {
   color: #4a4a4a;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   text-align: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 
@@ -568,7 +568,7 @@ table.register td input.text { /* input form fields */
 #statsContainer .statsSurveyTitle {
   padding: 0;
 	color: #4a4a4a;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
@@ -580,7 +580,7 @@ table.register td input.text { /* input form fields */
   padding: 10px 0px 0px 0px;
   text-align: center;
 	color: #4a4a4a;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 }
@@ -620,7 +620,7 @@ table.statisticstable td {
 table.statisticstable th {
 	text-align: center;
 	padding: 10px 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 15px;
@@ -638,7 +638,7 @@ table.statisticssummary {
 }
 
 table.statisticssummary thead tr th {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #bc3d34;
 	font-style: normal;
 	font-weight: 700;
@@ -667,7 +667,7 @@ table.statisticssummary tbody tr th {
 }
 #group-wrapper h3.groupname {
   color: #4a4a4a;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -711,7 +711,7 @@ table.statisticssummary tbody tr th {
 
 /* Main questiontext box */
 div.questiontext {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color: #bc3d34;
   font-style: normal;
   font-weight: 700;
@@ -852,7 +852,7 @@ background: linear-gradient(to bottom, #97c42c 0%,#7fa71f 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97c42c', endColorstr='#7fa71f',GradientType=0 );
 
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 text-transform: uppercase;
@@ -913,7 +913,7 @@ background-size: 9px 13px;
 padding: 0;
 padding-right: 25px;
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
@@ -964,11 +964,11 @@ background-size: 9px 13px;
 padding: 0;
 padding-left: 25px;
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
-text-transform: uppercase;	
+text-transform: uppercase;
 }
 
 /* Save All button */
@@ -989,7 +989,7 @@ background: linear-gradient(to bottom, #9ec5d3 0%,#769ead 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ec5d3', endColorstr='#769ead',GradientType=0 );
 
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -1027,7 +1027,7 @@ background: linear-gradient(to bottom, #7c7e7d 0%,#5c5d5f 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c7e7d', endColorstr='#5c5d5f',GradientType=0 );
 
 display: inline-block;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 15px;
@@ -1136,9 +1136,9 @@ margin: 20px 0;
   background-image: none;
   border: 1px solid #666;
   border-radius: 8px;
-  
+
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#edf3f4));
-  background: -webkit-linear-gradient(top, #FFFFFF, #edf3f4); 
+  background: -webkit-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -moz-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -ms-linear-gradient(top, #FFFFFF, #edf3f4);
   background: -o-linear-gradient(top, #FFFFFF, #edf3f4);
@@ -1164,7 +1164,7 @@ select.languagechanger {}
 .printouttitle { /* see h1 */
   display:block;
 	color: #4a4a4a;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
@@ -1187,7 +1187,7 @@ select.languagechanger {}
 }
 
 tr.printanswersgroup {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #bc3d34;
 	font-style: normal;
 	font-weight: 700;
@@ -1201,7 +1201,7 @@ tr.printanswersgroup td {
 }
 
 tr.printanswersquestionhead {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Proxima Nova', sans-serif;
 	color: #4a4a4a;
 	font-style: normal;
 	font-weight: 700;
@@ -1272,7 +1272,7 @@ p#tokenmessage {
 span.asterisk { /* Asterisk when question mandatory */
   color:#ff0f0f;
   font-size:80%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   letter-spacing:2px;
 }
 
@@ -1333,7 +1333,7 @@ input.text,
 height: 29px;
 width: auto;
 padding: 0 5px;
-font-family: 'Roboto', sans-serif;
+font-family: 'Proxima Nova', sans-serif;
 font-style: normal;
 font-weight: 400;
 color: #6f6f6f;
@@ -1524,7 +1524,7 @@ table.question tbody td label input.radio {}
 .array-flexible-duel-scale tbody td.ddarrayseparator {
   background-color:#fff;
   margin:0;
-  padding:0;    
+  padding:0;
 }
 
 .array-flexible-duel-scale tbody td.ddprefix {
@@ -1578,7 +1578,7 @@ table.question tbody td label input.radio {}
   padding-left: 10px;
   padding-right: 10px;
   width: 94px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #6f6f6f;
@@ -1625,7 +1625,7 @@ padding-left: 0;
 .numeric-multi .answer ul li.multiplenumerichelp span.dynamic_sum {
 text-align: left;
 float: left;
-padding-left: 0;	
+padding-left: 0;
 }
 
 
@@ -1643,7 +1643,7 @@ padding-left: 0;
   padding-left: 10px;
   padding-right: 10px;
   width: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #6f6f6f;
@@ -1657,13 +1657,13 @@ padding-left: 0;
 }
 
 .numeric-multi .answer ul li span.input input:focus {background: #FFF;}
-    
+
     .numeric-multi .answer li span.input,
     .numeric-multi .answer li.multiplenumerichelp span {
     text-align:left;
   }
-  
-  
+
+
   .numeric-multi .answer ul li label.slider-label {
   	clear: both;
     font-size:100%;
@@ -1688,14 +1688,14 @@ padding-left: 0;
   .numeric-multi .answer ul li div.multinum-slider { /* slider container */
     vertical-align:middle;
   }
-  
+
   .numeric-multi .answer ul li.withslider {
   	display: block;
   	margin-bottom: 25px;
   }
-  
-  
-  
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Ranking question */
   .ranking {}
@@ -1740,7 +1740,7 @@ padding-left: 0;
   background: #f0f0f0;
   border: 1px solid #6f6f6f;
   margin-bottom: 3px;
-  cursor: move; 
+  cursor: move;
 }
 
 .dragDropTable .columns2 strong.SortableTitle {
@@ -1762,27 +1762,27 @@ padding-left: 0;
   cursor: move;
   color: #FFF;
 }
-  
-  
-  
-  
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Boilerplate question */
   .boilerplate  {}
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Yes-No question */
   .yes-no {}
   .yes-no .answer ul li input.radio {}
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Multiple Options question */
   .multiple-opt {}
@@ -1791,11 +1791,11 @@ padding-left: 0;
   .multiple-opt .answer ul li label.answertext{}
   .multiple-opt .answer ul li input.text { /* Comment field */
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Multiple Options question with comments */
   .multiple-opt-comments {}
@@ -1807,31 +1807,31 @@ padding-left: 0;
   .multiple-opt-comments .answer ul li span.comment label.answer-comment input.text {}
   .multiple-opt-comments .answer ul li span.comment {padding: 0; margin: 5px 0 20px 0; display: block;}
   .multiple-opt-comments .answer ul li span.comment input.text  {width: 100%; margin: 0; padding: 0; display: block;}
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* List Dropdown question */
   .list-dropdown {}
   .list-dropdown p.question select {width: 100%;}
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* 5 point choice question */
   .choice-5-pt-radio {}
   .choice-5-pt-radio .answer ul li input.radio {}
-  .choice-5-pt-radio .answer ul li label.answertext {} 
-  
-  
-  
-  
-  
+  .choice-5-pt-radio .answer ul li label.answertext {}
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* List Radio qeustion */
   .list-radio .answer ul li {margin-bottom: 15px;}
@@ -1844,11 +1844,11 @@ padding-left: 0;
     display: block;
   	margin-top: 10px;
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* List with Comment question */
   .list-with-comment {}
@@ -1867,11 +1867,11 @@ padding-left: 0;
   	padding: 0;
     display: block;
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Multiple Short Text question */
   .multiple-short-txt {}
@@ -1889,15 +1889,15 @@ padding-left: 0;
   .multiple-short-txt .answer li span {
     text-align:left;
   }
-  
+
   ul.subquestions-list, ul.questions-list, ul.text-list {
 
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Short Free Text question */
   .text-short {}
@@ -1911,25 +1911,25 @@ padding-left: 0;
   	margin: 0;
   	padding: 0;
     display: block;
-  	}  
-  
-  
-  
-  
+  	}
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Multiple Long Text question */
   .text-long {}
-  .text-long .answer textarea.textarea {	
+  .text-long .answer textarea.textarea {
   	width: 100%;
   	margin: 0;
   	padding: 0;
-    display: block;  	
+    display: block;
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Huge Free Text question */
   .text-huge {}
@@ -1938,16 +1938,16 @@ padding-left: 0;
   	margin: 0;
   	padding: 0;
     display: block;
-  	} 
-  
-  
-  
-  
-  
+  	}
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* General question style to overwrite the ones above */
-  
-  
+
+
   /* START: Column alignment */
   /* Applies for: .list-radio, .multiple-opt, (.gender????), */
   ul.cols-2-ul, ul.cols-3-ul, ul.cols-4-ul, ul.cols-5-ul, ul.cols-6-ul, ul.cols-7-ul, ul.cols-8-ul {
@@ -1982,22 +1982,22 @@ padding-left: 0;
   ul.cols-2-ul li, ul.cols-3-ul li, ul.cols-4-ul li, ul.cols-5-ul li, ul.cols-6-ul li, ul.cols-7-ul li, ul.cols-8-ul li {
     padding-right:5px;
   }
-  
+
   ul.first {}
   ul.last {}
   /* END: Column alignment */
-  
+
   /*----------------------------------------------------------------------------*/
   /* END: Question styles */
   /*----------------------------------------------------------------------------*/
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* Jquery CSS */
-  
+
   /** UI Base **/
   .ui-wrapper {
     border:1px solid #50A029;
@@ -2005,8 +2005,8 @@ padding-left: 0;
   .ui-wrapper input,.ui-wrapper textarea {
     border:0;
   }
-  
-  
+
+
   /* UI Slider */
   .ui-slider {
     width: auto;/* slider-bar width */
@@ -2029,7 +2029,7 @@ padding-left: 0;
   .ui-widget-content {
     /* border-color or background-color of slider bar */
   }
-  
+
   .slider_callout {
     height:20px;
     width:100px;
@@ -2046,7 +2046,7 @@ padding-left: 0;
     float:left;
     width:50px;
     margin:15px 0 0 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-size:80%;
     font-weight:400;
     text-align:left;
@@ -2055,17 +2055,17 @@ padding-left: 0;
     float: right;
     width:80px;
     margin:15px 0 0 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-size:80%;
     font-weight:400;
     text-align:right;
   }
   /*----------------------------------------------------------------------------*/
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
 /* Question Index */
 .outerframe.withindex,.withindex .outerframe{
@@ -2125,11 +2125,11 @@ padding-left: 0;
 #index .container .row.missing { background: #bc3d34; color: #fff; }
 #index .container input {width: 100%; margin: 10px 0;}
 /*----------------------------------------------------------------------------*/
-  
-  
-  
-  
-  
+
+
+
+
+
   /*----------------------------------------------------------------------------*/
   /* taken from default template */
   /* Tips / Validation Messages */
@@ -2137,12 +2137,12 @@ padding-left: 0;
   div.em_num_answers.good {
     color: green;
   }
-  
+
   div.em_num_answers.error {
     color: red;
     display: block;
   }
-  
+
   div.em_value_range.good {
     color: green;
   }
@@ -2150,7 +2150,7 @@ padding-left: 0;
     color: red;
     display: block;
   }
-  
+
   div.em_sum_range.good {
     color: green;
   }
@@ -2158,7 +2158,7 @@ padding-left: 0;
     color: red;
     display: block;
   }
-  
+
   div.em_regex_validation {
     display: none;
   }
@@ -2168,21 +2168,21 @@ padding-left: 0;
   div.em_regex_validation.error {
     color: red;
   }
-  
+
   div.em_q_fn_validation.good {
     color: green;
   }
   div.em_q_fn_validation.error {
     color: red;
   }
-  
+
   div.em_sq_fn_validation.good {
     color: green;
   }
   div.em_sq_fn_validation.error {
     color: red;
   }
-  
+
   div.em_other_comment_mandatory.good {
     display: none;
   }
@@ -2190,15 +2190,15 @@ padding-left: 0;
     color: red;
     display: block;
   }
-  
+
   input.em_sq_validation.good, textarea.em_sq_validation.good {
   }
-  
+
   input.em_sq_validation.error, textarea.em_sq_validation.error {
     color: black;
     background-color:  pink;
   }
-  
+
   span.dynamic_sum {
     font-weight: bold;
   }
@@ -2208,7 +2208,7 @@ padding-left: 0;
   span.dynamic_sum.error {
     color: red;
   }
-  
+
   span.dynamic_remaining {
     font-weight: bold;
   }
@@ -2218,49 +2218,49 @@ padding-left: 0;
   span.dynamic_remaining.error {
     color: red;
   }
-  
+
   /* If  it is still invalid after submit, flag it in red */
   .input-error div.error {
     color: red;
     display: block;
   }
-  
+
   span.hide-tip div.good {
     display: none;
   }
-  
+
   span.hide-tip div.error {
     color: red;
   }
-  
+
   .input-error span.hide-tip div.error {
     color: red;
     display: block;
   }
-  
+
   /* II / 3b. Limesurvey 1.91 validation styles					*/
   p.good
     {
     color: green;
   }
-  
+
   p.problem
     {
     color: red;
   }
-  
+
   /*----------------------------------------------------------------------------*/
-  
-  
-  
-  
-  
+
+
+
+
+
   /* START: Clearfix */
   .clearfix:after {
-    content:"."; 
-    display:block; 
-    height:0; 
-    clear:both; 
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
     visibility:hidden;
   }
   .clearfix {display:inline-block;}
@@ -2269,7 +2269,7 @@ padding-left: 0;
   .clearfix {display:block;}
   /* End hide from IE-mac */
   /* END: Clearfix */
-  
+
 
 /* Mobile */
 
@@ -2279,4 +2279,4 @@ padding-left: 0;
 
 .multiple-short-txt .answer ul li span {
 	margin: 0 0 15px 0;
-}                                                                                                                                
+}
