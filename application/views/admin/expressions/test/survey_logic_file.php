@@ -17,7 +17,7 @@ if (empty($_REQUEST['sid']))   //  || count($_REQUEST) == 0) {
     $surveyList=getSurveyList();
     $sFormTag= CHtml::form(array('admin/expressions/sa/survey_logic_file'), 'post');
     $form = <<< EOD
-$sFormTag    
+$sFormTag
 <h3>Generate a logic file for the survey</h3>
 <table border='1'>
 <tr><th>Parameter</th><th>Value</th></tr>
@@ -77,7 +77,7 @@ background-color:lightgrey;
 
 tr.LEMquestion
 {
-background-color:#EAF2D3;
+background-color:#ffffff;
 }
 
 tr.LEManswer td

@@ -1,59 +1,59 @@
 /*** Start jQuery UI Theme Styles ***/
 
 .ui-button::-moz-focus-inner {
-	border: 0; 
+	border: 0;
 	padding: 0;   /* Get rid of extra padding in focused button in FF */
 }
 
-.ui-button { 
-	position: relative; 
-	padding: 0.1em 0 0.1em 0; 
+.ui-button {
+	position: relative;
+	padding: 0.1em 0 0.1em 0;
 	cursor: pointer;
-	font-family: Arial, Verdana, Geneva, sans-serif;
+	font-family: 'Proxima Nova', Arial, Verdana, Geneva, sans-serif;
 	font-size: 1.0em;
 	font-weight: normal;
 	line-height: normal;
 }
 
-.ui-state-default{  
-	color: #333333; 
+.ui-state-default{
+	color: #333333;
 	border: 1px solid #A0A0A0;
 }
 
-.ui-state-hover {  
-	color: #212121; 
+.ui-state-hover {
+	color: #212121;
 	border: 1px solid #999999;
 }
 
-.ui-state-active {  
-	color: #212121; 
-	border: 1px solid #AAAAAA; 
+.ui-state-active {
+	color: #212121;
+	border: 1px solid #AAAAAA;
 }
 
-.ui-button-icon-only { 
+.ui-button-icon-only {
 	width: 2.2em; /* To make room for the icon, a width needs to be set here */
-} 
+}
 
-button.ui-button-icon-only { 
+button.ui-button-icon-only {
 	width: 2.4em; /* Button elements seem to need a little more width */
 }
 
-.ui-button-icons-only { 
-	width: 3.4em; 
-} 
+.ui-button-icons-only {
+	width: 3.4em;
+}
 
 button.ui-button-icons-only {
-	width: 3.7em; 
+	width: 3.7em;
 }
 
 /* Button text elements */
 .ui-button-text-only .ui-button-text {
-	padding: 0 1em; 
+	padding: 0 1em;
 }
 
-.ui-button-icon-only .ui-button-text, 
+.ui-button-icon-only .ui-button-text,
 .ui-button-icons-only .ui-button-text {
-	text-indent: -9999999px; 
+	text-indent: -9999999px;
 }
 
 .ui-button-text-icon-primary .ui-button-text {
@@ -67,7 +67,7 @@ button.ui-button-icons-only {
 }
 
 .ui-button-text-icons .ui-button-text {
-	padding: 0 1.7em; 
+	padding: 0 1.7em;
 }
 
 input.ui-button {
@@ -82,29 +82,29 @@ input.ui-button {
 .ui-button-icons-only .ui-icon {
 	position: absolute;
 	top: 50%;
-	margin-top: -8px; 
+	margin-top: -8px;
 }
 
 .ui-button-icon-only .ui-icon {
-	left: 50%; 
-	margin-left: -8px; 
+	left: 50%;
+	margin-left: -8px;
 }
 
-.ui-button-text-icon-primary .ui-button-icon-primary, 
-.ui-button-text-icons .ui-button-icon-primary, 
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
 .ui-button-icons-only .ui-button-icon-primary {
 	left: .4em;
 	*left: 2px;
 }
 
-.ui-button-text-icon-secondary .ui-button-icon-secondary, 
-.ui-button-text-icons .ui-button-icon-secondary, 
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
 .ui-button-icons-only .ui-button-icon-secondary {
 	right: .4em;
 	*right: 2px;
 }
 
-.ui-button-text-icons .ui-button-icon-secondary, 
+.ui-button-text-icons .ui-button-icon-secondary,
 .ui-button-icons-only .ui-button-icon-secondary {
 	right: .4em;
 	*right: 2px;
@@ -112,18 +112,18 @@ input.ui-button {
 
 /* Button sets*/
 .ui-buttonset {
-	margin-right: 7px; 
+	margin-right: 7px;
 }
 
 .ui-buttonset .ui-button {
 	margin-left: 0;
-	margin-right: -.3em; 
+	margin-right: -.3em;
 }
 
 /*** End jQuery UI Theme Styles ***/
 
 body {
-  font-family: arial, verdana, sans-serif;
+  font-family: 'Proxima Nova', arial, verdana, sans-serif;
   font-size: 14px;
   line-height: 17px;
   background-color: #999;
@@ -139,7 +139,7 @@ table.question {
 }
 
 td {
-  font-family: arial, verdana, sans-serif;
+  font-family: 'Proxima Nova', arial, verdana, sans-serif;
   font-size: 14px;
   line-height: 17px;
 }
@@ -173,13 +173,13 @@ td.tenpoint {
 .asterisk {
   color: red;
   font-size: 9pt;
-  font-family: verdana;
+  font-family: 'Proxima Nova', verdana;
   padding-right:1em;
 }
 
 span.qnumcode {
 	font-style:italic;
-}	
+}
 .showqnumcode-X .qnumcode {
 	display:none;
 }
@@ -190,7 +190,7 @@ span.qnumcode {
 }
 
 .questiontext {
-  font-family: verdana;
+  font-family: 'Proxima Nova', verdana;
   font-size: 12px;
   font-weight: bold;
 }
@@ -322,7 +322,7 @@ table.question tr.array1:hover,table.question tr.array2:hover {
 }
 .clearall-result {
 	font-size: small;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
 	text-align: center;
 	background-color: #FFFFFF;
 }
@@ -345,7 +345,7 @@ table.question tr.array1:hover,table.question tr.array2:hover {
 
 .group-description {
 	font-size: small;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family: 'Proxima Nova', Verdana, Arial, Helvetica, sans-serif;
 }
 
 .load-error {
@@ -414,7 +414,7 @@ table.question tr.array1:hover,table.question tr.array2:hover {
 
 .group-name {
 	font-size: small;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family: 'Proxima Nova', Verdana, Arial, Helvetica, sans-serif;
 	color: #666666;
 	font-weight: bold;
 }
@@ -442,7 +442,7 @@ table.question tr.array1:hover,table.question tr.array2:hover {
 }
 
 .survey-list-table .site-name {
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family: 'Proxima Nova', Verdana, Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	font-size: large;
 	color: #328639;
@@ -511,13 +511,13 @@ table.question tr.array1:hover,table.question tr.array2:hover {
 ,.array-5-pt
 ,.array-10-pt
 ,.array-yes-uncertain-no
-,.array-increase-same-decrease 
-,.array-flexible-row 
-,.array-flexible-column 
-,.slider 
-,.array-multi-flexi 
+,.array-increase-same-decrease
+,.array-flexible-row
+,.array-flexible-column
+,.slider
+,.array-multi-flexi
 ,.array-multi-flexi-text
-,.array-flexible-duel-scale 
+,.array-flexible-duel-scale
 */ /* - - -  - - -  - - -  - - - - - -  - - -  - - - -
    START: General list styles - - -  - - -  - - - - */
 .choice-5-pt-radio .answer ul,.list-radio-flexible .answer ul,.list-radio .answer ul,.list-with-comment .answer ul,.multiple-opt .answer ul,.multiple-opt-comments .answer ul,.multiple-short-txt .answer ul,.numeric-multi .answer ul,.yes-no .answer ul,.gender .answer ul
@@ -563,13 +563,13 @@ table.question tr.array1:hover,table.question tr.array2:hover {
   margin-left: 1em;
 }
 
-.date p.question select.day {  
+.date p.question select.day {
 }
 
-.date p.question select.month {  
+.date p.question select.month {
 }
 
-.date p.question select.year {  
+.date p.question select.year {
 }
 
 #ui-datepicker-div {
@@ -624,7 +624,7 @@ table.question tr.array1:hover,table.question tr.array2:hover {
   width: 85%;
 }
 
-.list-radio .answer ul.colstyle-css li label, .list-radio .answer ul.colstyle-ul li label, .list-radio .answer table.colstyle-table li label, 
+.list-radio .answer ul.colstyle-css li label, .list-radio .answer ul.colstyle-ul li label, .list-radio .answer table.colstyle-table li label,
 .list-with-comment .answer ul.colstyle-css li label, .list-with-comment .answer ul.colstyle-ul li label, .list-with-comment .answer table.colstyle-table li label {
     display: inline;
 }
@@ -722,7 +722,7 @@ ul.cols-8 li,ul.cols-8-ul,table.cols-8 td {
 }
 
 .ranking {
-  
+
 }
 
 
@@ -751,7 +751,7 @@ ul.cols-8 li,ul.cols-8-ul,table.cols-8 td {
 /* The following styles only apply to modern (relatively) complete CSS2 compliant browsers. (Not less than IE 8) */
 .multiple-opt-comments td.answer,.multiple-short-txt td.answer,.numeric-multi td.answer
   {
-  
+
 }
 
 .multiple-opt-comments ul,.multiple-short-txt ul,.numeric-multi ul {
@@ -931,7 +931,7 @@ table.rank td.helptext {
   position: absolute;
   top: -21px;
   margin-left: -3px;
-  font-family: 'Myriad Pro';
+  font-family: 'Proxima Nova', 'Myriad Pro';
   color: #284a6e;
   font-weight: bold;
   text-align: left;
@@ -941,7 +941,7 @@ table.rank td.helptext {
   float: left;
   width: 50px;
   margin: 15px 0 0 -0.3em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   font-size: 0.7em;
   font-weight: normal;
   text-align: left;
@@ -951,7 +951,7 @@ table.rank td.helptext {
   float: right;
   width: 50px;
   margin: 15px -0.3em 0 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   font-size: 0.7em;
   font-weight: normal;
   text-align: right;
@@ -981,7 +981,7 @@ table.rank td.helptext {
 }
 
 #tokenform input {
-  
+
 }
 
 #tokenform label {
@@ -1110,7 +1110,7 @@ div.questionTitle {
   border-left: 1px solid #ccc;
 }
 
-#index h2 { 
+#index h2 {
   text-align: center;
   font-weight: normal;
 }
