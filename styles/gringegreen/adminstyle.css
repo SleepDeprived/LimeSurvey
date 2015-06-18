@@ -1198,7 +1198,7 @@ textarea.updater-changelog {
 
 .form30newtabs li label:first-child,
 .form30 li label:first-child {
-    width: 30%;
+    width: 20%;
     text-align: right;
     margin-right: 0.5em;
     float: left;
@@ -1264,7 +1264,7 @@ textarea.updater-changelog {
 }
 
 .form30 ul.editor-parent {
-    min-width:1000px;
+    min-width:660px;
 }
 
 #frmeditquestion li,
