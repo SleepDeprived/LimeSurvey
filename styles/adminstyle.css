@@ -37,6 +37,7 @@
 /* HTML editor */
 div.htmleditor {
     display: inline-block;
+    border: solid 2px #6b665f;
 }
 
 .imagelink {
@@ -56,7 +57,7 @@ div.htmleditor {
 
 .menubar select {
     margin-bottom: 0px;
-   
+
 }
 .qtip-questiontype {
     z-index: 100000;
@@ -177,7 +178,7 @@ div.ui-jqgrid-hbox input, div.ui-jqgrid-hbox input{
 .ui-tooltip.tooltip-text{min-width:15em}
 .templateeditor {
     float:left;
-    width:70%; 
+    width:70%;
     padding:1em;
 }
 
